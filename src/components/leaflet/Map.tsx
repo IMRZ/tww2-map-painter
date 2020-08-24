@@ -29,14 +29,14 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
     }
   }, []); // eslint-disable-line
 
-  // runs once after render, after all children done setting up
   React.useEffect(() => {
-    const leafletMap = leafletMapRef.current!; // TODO: let it throw?
+    const leafletMap = leafletMapRef.current!;
     leafletMap.fitBounds(bounds);
-  }, []); // eslint-disable-line
 
-  // baselayers
-  // overlays
+    return () => {
+      leafletMap.remove();
+    }
+  }, []); // eslint-disable-line
 
   const layers = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
