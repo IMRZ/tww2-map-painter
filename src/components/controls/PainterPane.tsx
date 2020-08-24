@@ -82,7 +82,7 @@ const PainterPane: FC = () => {
     }
 
     return options;
-  }, [painter.importedFactions]);
+  }, [painter.importedFactions]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const faction = factionOptions.find((f) => f.key === painter.ownership[region?.key]) ?? null;
   const painterFaction = factionOptions.find((f) => f.key === painter.selectedFaction) ?? null;

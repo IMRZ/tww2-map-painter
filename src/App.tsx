@@ -167,7 +167,6 @@ function App() {
         open={open}
       >
         <div className={classes.drawerHeader}>
-          <span style={{ flexGrow: 1 }}></span>
           <IconButton onClick={handleDrawerClose}>
             <Close />
           </IconButton>

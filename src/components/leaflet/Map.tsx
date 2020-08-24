@@ -11,7 +11,7 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
 
   const mapContainer = useCallback((el) => {
     if (el !== null) {
-      const map = L.map(el, {
+      const leafletMap = L.map(el, {
         crs: L.CRS.Simple,
         minZoom: -2,
         maxZoom: 2,
@@ -25,9 +25,9 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
         markerZoomAnimation: true,
       });
 
-      leafletMapRef.current = map;
+      leafletMapRef.current = leafletMap;
     }
-  }, []); // eslint-disable-line
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
     const leafletMap = leafletMapRef.current!;
@@ -36,7 +36,7 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
     return () => {
       leafletMap.remove();
     }
-  }, []); // eslint-disable-line
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const layers = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {

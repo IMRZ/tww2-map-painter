@@ -34,6 +34,12 @@ const DEFAULT_FACTION_GROUPS = Object.values(factions).reduce((accumulator: { [k
 type Mode = 'interactive' | 'painter';
 type RegionKey = string | null;
 type FactionKey = string | null;
+type MapOverlay = {
+  key: string;
+  label: string;
+  layerId: string;
+  visible: boolean;
+};
 
 const INITIAL_STATE = {
   selectedMap: DEFAULT_MAP,
@@ -51,6 +57,7 @@ const INITIAL_STATE = {
   config: {
     drawerOpen: true,
     flyToEnabled: true,
+    overlays: {} as { [key: string]: MapOverlay },
   }
 };
 
