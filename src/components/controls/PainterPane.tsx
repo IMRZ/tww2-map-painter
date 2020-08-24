@@ -44,9 +44,11 @@ const PainterPane: FC = () => {
     importMap,
     selectMode,
     selectFaction,
+    setOverlayVisible,
   } = useStore();
 
   const selectedMap = useAppSelector((state) => state.painter.selectedMap);
+  const overlays = useAppSelector((state) => state.painter.overlays);
 
   const regionOptions = Object.values(selectedMap.regions).reduce((accumulator: any[], region: any) => {
     accumulator.push({
@@ -93,7 +95,7 @@ const PainterPane: FC = () => {
         <Tab label="Interactive mode" value="interactive" />
         <Tab label="Paint mode" value="painter" />
       </Tabs>
-      <div style={{ height: '25%' }}>
+      <div style={{ height: 220 }}>
           {painter.mode === 'interactive' && (
             <>
               <div className={classes.content}>
@@ -214,36 +216,39 @@ const PainterPane: FC = () => {
 
       <Divider />
 
-
       <List subheader={<ListSubheader>Map layers</ListSubheader>}>
-        <ListItem dense>
-          <ListItemIcon>
-            <Layers />
-          </ListItemIcon>
-          <ListItemText primary="Display icons" />
-          <ListItemSecondaryAction>
-            <Switch
-              edge="end"
-              color="primary"
-              onChange={() => {}}
-              checked={false}
-            />
-          </ListItemSecondaryAction>
-        </ListItem>
-        <ListItem dense>
-          <ListItemIcon>
-            <Layers />
-          </ListItemIcon>
-          <ListItemText primary="Display regions" />
-          <ListItemSecondaryAction>
-            <Switch
-              edge="end"
-              color="primary"
-              onChange={() => {}}
-              checked={false}
-            />
-          </ListItemSecondaryAction>
-        </ListItem>
+        {overlays['region-owner-markers'] !== undefined && (
+          <ListItem dense>
+            <ListItemIcon>
+              <Layers />
+            </ListItemIcon>
+            <ListItemText primary="Display icons" />
+            <ListItemSecondaryAction>
+              <Switch
+                edge="end"
+                color="primary"
+                onChange={(e, checked) => setOverlayVisible('region-owner-markers', checked)}
+                checked={overlays['region-owner-markers'].visible}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        )}
+        {overlays['region-paths'] !== undefined && (
+          <ListItem dense>
+            <ListItemIcon>
+              <Layers />
+            </ListItemIcon>
+            <ListItemText primary="Display regions" />
+            <ListItemSecondaryAction>
+              <Switch
+                edge="end"
+                color="primary"
+                onChange={(e, checked) => setOverlayVisible('region-paths', checked)}
+                  checked={overlays['region-paths'].visible}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        )}
         <ListItem dense>
           <ListItemIcon>
             <Layers />

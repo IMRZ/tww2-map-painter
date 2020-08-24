@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import L from 'leaflet';
 
 import { useAppSelector, useAppDispatch } from '../../store';
-import { regionChanged, regionOwnerChanged } from '../../store/factions';
+import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/factions';
 
 const RegionPath: FC<{ region: any }> = ({ region }) => {
   const dispatch = useAppDispatch();
@@ -48,19 +48,29 @@ const RegionPaths: FC<{ selectedMap: any }> = ({ selectedMap }) => {
 
 type RegionSvgLayerProp = {
   map?: React.MutableRefObject<L.Map>,
+  refs?: any,
   selectedMap: any,
   bounds: any,
 };
 
-const RegionSvgLayer: FC<RegionSvgLayerProp> = ({ map, selectedMap, bounds }) => {
+const RegionSvgLayer: FC<RegionSvgLayerProp> = ({ map, refs, selectedMap, bounds }) => {
   const [svgElem, setSvgElem] = React.useState<SVGSVGElement>();
+
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     const leafletMap = map!.current; // TODO: let it throw?
     const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svgElement.setAttribute('version', '1.1');
     svgElement.setAttribute('viewBox', `0 0 ${bounds[1][1]} ${bounds[1][0]}`);
-    L.svgOverlay(svgElement, bounds).addTo(leafletMap);
+    const layer = L.svgOverlay(svgElement, bounds);
+    leafletMap.addLayer(layer);
+    refs.current['region-paths'] = layer;
+    dispatch(mapOverlayCreated({
+      key: 'region-paths',
+      label: 'Region paths',
+      visible: true,
+    }));
     setSvgElem(svgElement);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 

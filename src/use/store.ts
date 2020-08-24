@@ -5,7 +5,8 @@ import {
   updateConfiguration,
   importMap,
   modeChanged,
-  factionChanged
+  factionChanged,
+  mapOverlayChanged
 } from '../store/factions';
 
 export function useStore() {
@@ -46,6 +47,10 @@ export function useStore() {
 
     importMap: (map: any) => {
       dispatch(importMap(map));
+    },
+
+    setOverlayVisible: (overlayKey: string, visible: boolean) => {
+      dispatch(mapOverlayChanged([overlayKey, visible]));
     },
 
     selectMode: (mode: string) => {

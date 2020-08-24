@@ -8,6 +8,7 @@ type MapProps = {
 
 const Map: FC<MapProps> = ({ children, bounds }) => {
   const leafletMapRef = React.useRef<L.Map | null>(null);
+  const refs = React.useRef<any>({});
 
   const mapContainer = useCallback((el) => {
     if (el !== null) {
@@ -40,7 +41,7 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
 
   const layers = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child, { map: leafletMapRef });
+      return React.cloneElement(child, { map: leafletMapRef, refs });
     } else {
       return null;
     }

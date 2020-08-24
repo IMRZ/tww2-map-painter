@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import assets from '../../assets';
 
 import { useAppSelector, useAppDispatch } from '../../store';
-import { regionChanged, regionOwnerChanged } from '../../store/factions';
+import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/factions';
 
 const useStyles = makeStyles({
   pointer: {
@@ -88,11 +88,14 @@ const Marker: FC<{ regionKey: string }> = ({ regionKey }) => {
 
 type Props = {
   map?: React.MutableRefObject<L.Map>,
+  refs?: any,
   selectedMap: any,
 };
 
-const PortalMarkers: FC<Props> = ({ map, selectedMap }) => {
+const PortalMarkers: FC<Props> = ({ map, refs, selectedMap }) => {
   const [elems, setElems] = React.useState<[HTMLElement, any][]>([]);
+
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     const leafletMap = map!.current; // TODO: let it throw?
@@ -113,7 +116,13 @@ const PortalMarkers: FC<Props> = ({ map, selectedMap }) => {
 
     const layer = L.layerGroup(markers);
     leafletMap.addLayer(layer);
-  }, []); // eslint-disable-line
+    refs.current['region-owner-markers'] = layer
+    dispatch(mapOverlayCreated({
+      key: 'region-owner-markers',
+      label: 'Region owner makers',
+      visible: true,
+    }));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // attach portals to current tree
   return <>{elems.map(([e, region]) => ReactDOM.createPortal(<Marker regionKey={region.key} />, e))}</>

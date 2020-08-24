@@ -37,7 +37,6 @@ type FactionKey = string | null;
 type MapOverlay = {
   key: string;
   label: string;
-  layerId: string;
   visible: boolean;
 };
 
@@ -54,11 +53,12 @@ const INITIAL_STATE = {
 
   presets: DEFAULT_PRESETS,
 
+  overlays: {} as { [key: string]: MapOverlay },
+
   config: {
     drawerOpen: true,
     flyToEnabled: true,
-    overlays: {} as { [key: string]: MapOverlay },
-  }
+  },
 };
 
 const painterSlice = createSlice({
@@ -92,6 +92,15 @@ const painterSlice = createSlice({
     regionOwnerChanged: (state, action) => {
       const [regionKey, factionKey] = action.payload;
       state.ownership[regionKey] = factionKey;
+    },
+
+    mapOverlayCreated: (state, action) => {
+      const overlay = action.payload as MapOverlay;
+      state.overlays[overlay.key] = overlay;
+    },
+    mapOverlayChanged: (state, action) => {
+      const [overlayKey, visible] = action.payload;
+      state.overlays[overlayKey].visible = visible;
     },
 
     updateConfiguration: (state, action) => {
@@ -131,6 +140,8 @@ export const {
   regionChanged,
   regionOwnerChanged,
   updateConfiguration,
+  mapOverlayCreated,
+  mapOverlayChanged,
   importMap
 } = painterSlice.actions;
 
