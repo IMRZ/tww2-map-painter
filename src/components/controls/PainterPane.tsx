@@ -244,25 +244,27 @@ const PainterPane: FC = () => {
                 edge="end"
                 color="primary"
                 onChange={(e, checked) => setOverlayVisible('region-paths', checked)}
-                  checked={overlays['region-paths'].visible}
+                checked={overlays['region-paths'].visible}
               />
             </ListItemSecondaryAction>
           </ListItem>
         )}
-        <ListItem dense>
-          <ListItemIcon>
-            <Layers />
-          </ListItemIcon>
-          <ListItemText primary="Display map labels" />
-          <ListItemSecondaryAction>
-            <Switch
-              edge="end"
-              color="primary"
-              onChange={() => {}}
-              checked={false}
-            />
-          </ListItemSecondaryAction>
-        </ListItem>
+        {overlays['map-text'] !== undefined && (
+          <ListItem dense>
+            <ListItemIcon>
+              <Layers />
+            </ListItemIcon>
+            <ListItemText primary="Display map labels" />
+            <ListItemSecondaryAction>
+              <Switch
+                edge="end"
+                color="primary"
+                onChange={(e, checked) => setOverlayVisible('map-text', checked)}
+                checked={overlays['map-text'].visible}
+              />
+            </ListItemSecondaryAction>
+          </ListItem>
+        )}
       </List>
     </Box>
   );

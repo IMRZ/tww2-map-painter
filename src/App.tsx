@@ -22,6 +22,7 @@ import PainterPane from './components/controls/PainterPane';
 
 import { useAppSelector, useAppDispatch } from './store';
 import { updateConfiguration } from './store/factions';
+import ImageTextLayer from './components/leaflet/ImageTextLayer';
 
 const theme = createMuiTheme({
   palette: {
@@ -152,6 +153,7 @@ function App() {
         <div className={classes.map} key={selectedMap.key}>
           <Map bounds={bounds}>
             <ImageLayer image={selectedMap.map} bounds={bounds} />
+            <ImageTextLayer image={selectedMap.mapText} bounds={bounds} />
             <RegionSvgLayer selectedMap={selectedMap} bounds={bounds} />
             <RegionMarkers selectedMap={selectedMap} />
             <MapListener selectedMap={selectedMap} />
