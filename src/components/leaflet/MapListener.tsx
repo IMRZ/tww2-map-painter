@@ -6,13 +6,15 @@ import { useAppSelector } from '../../store';
 
 type MapListenerProps = {
   map?: React.MutableRefObject<L.Map>,
+  refs?: any,
   selectedMap: any,
 };
 
-const MapListener: FC<MapListenerProps> = ({ map, selectedMap }) => {
+const MapListener: FC<MapListenerProps> = ({ map, refs, selectedMap }) => {
   const state = useStore();
 
   const drawerOpen = useAppSelector((state) => state.painter.config.drawerOpen);
+  const overlays = useAppSelector((state) => state.painter.overlays);
 
   React.useEffect(() => {
     const leafletMap = map?.current;
@@ -35,6 +37,21 @@ const MapListener: FC<MapListenerProps> = ({ map, selectedMap }) => {
       setTimeout(() => leafletMap.invalidateSize(), 200);
     }
   }, [drawerOpen]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  React.useEffect(() => {
+    const leafletMap = map?.current;
+
+    if (leafletMap && leafletMap.getZoom() !== undefined) {
+      Object.values(overlays).forEach((overlay) => {
+        const layer = refs.current[overlay.key];
+        if (overlay.visible) {
+          leafletMap.addLayer(layer);
+        } else {
+          leafletMap.removeLayer(layer);
+        }
+      });
+    }
+  }, [overlays]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return null;
 };

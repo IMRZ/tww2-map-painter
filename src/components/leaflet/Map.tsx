@@ -8,10 +8,11 @@ type MapProps = {
 
 const Map: FC<MapProps> = ({ children, bounds }) => {
   const leafletMapRef = React.useRef<L.Map | null>(null);
+  const refs = React.useRef<any>({});
 
   const mapContainer = useCallback((el) => {
     if (el !== null) {
-      const map = L.map(el, {
+      const leafletMap = L.map(el, {
         crs: L.CRS.Simple,
         minZoom: -2,
         maxZoom: 2,
@@ -25,22 +26,22 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
         markerZoomAnimation: true,
       });
 
-      leafletMapRef.current = map;
+      leafletMapRef.current = leafletMap;
     }
-  }, []); // eslint-disable-line
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // runs once after render, after all children done setting up
   React.useEffect(() => {
-    const leafletMap = leafletMapRef.current!; // TODO: let it throw?
+    const leafletMap = leafletMapRef.current!;
     leafletMap.fitBounds(bounds);
-  }, []); // eslint-disable-line
 
-  // baselayers
-  // overlays
+    return () => {
+      leafletMap.remove();
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const layers = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child, { map: leafletMapRef });
+      return React.cloneElement(child, { map: leafletMapRef, refs });
     } else {
       return null;
     }

@@ -34,6 +34,11 @@ const DEFAULT_FACTION_GROUPS = Object.values(factions).reduce((accumulator: { [k
 type Mode = 'interactive' | 'painter';
 type RegionKey = string | null;
 type FactionKey = string | null;
+type MapOverlay = {
+  key: string;
+  label: string;
+  visible: boolean;
+};
 
 const INITIAL_STATE = {
   selectedMap: DEFAULT_MAP,
@@ -48,10 +53,12 @@ const INITIAL_STATE = {
 
   presets: DEFAULT_PRESETS,
 
+  overlays: {} as { [key: string]: MapOverlay },
+
   config: {
     drawerOpen: true,
     flyToEnabled: true,
-  }
+  },
 };
 
 const painterSlice = createSlice({
@@ -85,6 +92,15 @@ const painterSlice = createSlice({
     regionOwnerChanged: (state, action) => {
       const [regionKey, factionKey] = action.payload;
       state.ownership[regionKey] = factionKey;
+    },
+
+    mapOverlayCreated: (state, action) => {
+      const overlay = action.payload as MapOverlay;
+      state.overlays[overlay.key] = overlay;
+    },
+    mapOverlayChanged: (state, action) => {
+      const [overlayKey, visible] = action.payload;
+      state.overlays[overlayKey].visible = visible;
     },
 
     updateConfiguration: (state, action) => {
@@ -124,6 +140,8 @@ export const {
   regionChanged,
   regionOwnerChanged,
   updateConfiguration,
+  mapOverlayCreated,
+  mapOverlayChanged,
   importMap
 } = painterSlice.actions;
 
