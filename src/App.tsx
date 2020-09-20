@@ -21,7 +21,7 @@ import MapCenterButton from './components/controls/MapCenterButton';
 import PainterPane from './components/controls/PainterPane';
 
 import { useAppSelector, useAppDispatch } from './store';
-import { updateConfiguration } from './store/factions';
+import { updateConfiguration } from './store/painter';
 import ImageTextLayer from './components/leaflet/ImageTextLayer';
 
 import Preloader from './components/Preloader';

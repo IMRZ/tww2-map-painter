@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import L from 'leaflet';
 
 import { useAppDispatch } from '../../store';
-import { mapOverlayCreated } from '../../store/factions';
+import { mapOverlayCreated } from '../../store/painter';
 
 
 type ImageTextLayerProps = {

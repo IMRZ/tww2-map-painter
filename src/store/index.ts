@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
 
-import painterReducer from './factions';
+import painterReducer from './painter';
 
 const rootReducer = combineReducers({
   painter: painterReducer,
