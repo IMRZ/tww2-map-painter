@@ -21,8 +21,10 @@ import MapCenterButton from './components/controls/MapCenterButton';
 import PainterPane from './components/controls/PainterPane';
 
 import { useAppSelector, useAppDispatch } from './store';
-import { updateConfiguration } from './store/factions';
+import { updateConfiguration } from './store/painter';
 import ImageTextLayer from './components/leaflet/ImageTextLayer';
+
+import Preloader from './components/Preloader';
 
 const theme = createMuiTheme({
   palette: {
@@ -151,14 +153,16 @@ function App() {
       >
         <Toolbar />
         <div className={classes.map} key={selectedMap.key}>
-          <Map bounds={bounds}>
-            <ImageLayer image={selectedMap.map} bounds={bounds} />
-            <ImageTextLayer image={selectedMap.mapText} bounds={bounds} />
-            <RegionSvgLayer selectedMap={selectedMap} bounds={bounds} />
-            <RegionMarkers selectedMap={selectedMap} />
-            <MapListener selectedMap={selectedMap} />
-            <MapCenterButton />
-          </Map>
+          <Preloader assets={[selectedMap.map, selectedMap.mapText]}>
+            <Map bounds={bounds}>
+              <ImageLayer image={selectedMap.map} bounds={bounds} />
+              <ImageTextLayer image={selectedMap.mapText} bounds={bounds} />
+              <RegionSvgLayer selectedMap={selectedMap} bounds={bounds} />
+              <RegionMarkers selectedMap={selectedMap} />
+              <MapListener selectedMap={selectedMap} />
+              <MapCenterButton />
+            </Map>
+          </Preloader>
         </div>
       </main>
       <Drawer

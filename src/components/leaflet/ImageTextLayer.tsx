@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import L from 'leaflet';
 
 import { useAppDispatch } from '../../store';
-import { mapOverlayCreated } from '../../store/factions';
+import { mapOverlayCreated } from '../../store/painter';
 
 
 type ImageTextLayerProps = {
@@ -10,9 +10,10 @@ type ImageTextLayerProps = {
   refs?: any,
   image: string,
   bounds: L.LatLngBoundsLiteral,
+  waitFor?: React.MutableRefObject<Promise<any>[]>,
 };
 
-const ImageTextLayer: FC<ImageTextLayerProps> = ({ map, refs, image, bounds }) => {
+const ImageTextLayer: FC<ImageTextLayerProps> = ({ map, refs, image, bounds, waitFor }) => {
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
@@ -23,6 +24,11 @@ const ImageTextLayer: FC<ImageTextLayerProps> = ({ map, refs, image, bounds }) =
     leafletMap.getPane('labels')?.style.setProperty('pointerEvents', 'none');
     const imageOverlay = L.imageOverlay(image, bounds, { pane: 'labels' });
     leafletMap.addLayer(imageOverlay);
+
+    const imageOverlayLoaded = new Promise((resolve) => {
+      imageOverlay.on('load', () => resolve());
+    });
+    waitFor?.current.push(imageOverlayLoaded);
 
     refs.current['map-text'] = imageOverlay;
     dispatch(mapOverlayCreated({

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useAppSelector, useAppDispatch } from '../../store';
-import { mapChanged } from '../../store/factions';
+import { mapChanged } from '../../store/painter';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {

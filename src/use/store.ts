@@ -7,7 +7,7 @@ import {
   modeChanged,
   factionChanged,
   mapOverlayChanged
-} from '../store/factions';
+} from '../store/painter';
 
 export function useStore() {
   const dispatch = useAppDispatch();

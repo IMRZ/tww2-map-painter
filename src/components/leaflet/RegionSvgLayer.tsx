@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import L from 'leaflet';
 
 import { useAppSelector, useAppDispatch } from '../../store';
-import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/factions';
+import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/painter';
 
 const RegionPath: FC<{ region: any }> = ({ region }) => {
   const dispatch = useAppDispatch();

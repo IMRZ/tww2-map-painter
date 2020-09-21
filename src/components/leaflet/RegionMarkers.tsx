@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import assets from '../../assets';
 
 import { useAppSelector, useAppDispatch } from '../../store';
-import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/factions';
+import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/painter';
 
 const useStyles = makeStyles({
   pointer: {
