@@ -8,6 +8,8 @@
 * [Leaflet.js](https://leafletjs.com/)
 
 ## Getting started
+TODO: git-lfs
+
 ``` bash
 # Install dependencies
 npm install

@@ -13,7 +13,6 @@ type MapListenerProps = {
 const MapListener: FC<MapListenerProps> = ({ map, refs, selectedMap }) => {
   const state = useStore();
 
-  const drawerOpen = useAppSelector((state) => state.painter.config.drawerOpen);
   const overlays = useAppSelector((state) => state.painter.overlays);
 
   React.useEffect(() => {
@@ -29,14 +28,6 @@ const MapListener: FC<MapListenerProps> = ({ map, refs, selectedMap }) => {
       }
     }
   }, [state.selectedRegion]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  React.useEffect(() => {
-    const leafletMap = map?.current;
-
-    if (leafletMap && leafletMap.getZoom() !== undefined) {
-      setTimeout(() => leafletMap.invalidateSize(), 200);
-    }
-  }, [drawerOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
     const leafletMap = map?.current;
