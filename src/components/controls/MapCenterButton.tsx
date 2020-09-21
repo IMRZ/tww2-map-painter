@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type MapCenterButtonProps = {
-  map?: React.MutableRefObject<L.Map>,
+  map?: React.MutableRefObject<L.Map>;
 };
 
 const MapCenterButton: FC<MapCenterButtonProps> = ({ map }) => {
@@ -30,7 +30,7 @@ const MapCenterButton: FC<MapCenterButtonProps> = ({ map }) => {
   };
 
   return (
-    <Fab size="medium" className={classes.fab} onClick={onClick} >
+    <Fab size="medium" color="primary" className={classes.fab} onClick={onClick}>
       <FilterCenterFocus />
     </Fab>
   );

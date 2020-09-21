@@ -86,7 +86,13 @@ function App() {
 
   const drawerContent = <PainterPane />;
 
-  return <AppLayout content={content} topbarContent={topbarContent} drawerContent={drawerContent} />;
+  return (
+    <AppLayout
+      content={content}
+      topbarContent={topbarContent}
+      drawerContent={drawerContent}
+    />
+  );
 }
 
 export default App;
