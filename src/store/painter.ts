@@ -56,7 +56,6 @@ const INITIAL_STATE = {
   overlays: {} as { [key: string]: MapOverlay },
 
   config: {
-    drawerOpen: true,
     flyToEnabled: true,
   },
 };

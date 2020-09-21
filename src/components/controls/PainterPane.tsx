@@ -11,15 +11,6 @@ import FactionAutocomplete from './FactionAutocomplete';
 const useStyles = makeStyles((theme) => ({
   root: {
     flex: 1,
-    overflowY: 'scroll',
-    '&::-webkit-scrollbar': {
-      width: 12,
-      backgroundColor: 'rgba(255, 255, 255, 0.12)',
-    },
-    '&::-webkit-scrollbar-thumb:vertical': {
-      margin: 5,
-      backgroundColor: 'rgba(255, 255, 255, 0.24)',
-    }
   },
   content: {
     padding: theme.spacing(2, 2),
