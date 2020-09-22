@@ -1,29 +1,41 @@
-import React, { FC, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import L from 'leaflet';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { MapContext } from './map-context';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%',
     transition: 'opacity 2s',
-    opacity: 0
+    opacity: 0,
   },
   loaded: {
     opacity: 1,
-  }
+  },
 }));
 
 type MapProps = {
-  bounds: L.LatLngBoundsLiteral,
+  children: React.ReactNode;
+  campaign: any;
 };
 
-const Map: FC<MapProps> = ({ children, bounds }) => {
+const Map = (props: MapProps) => {
+  const { children, campaign } = props;
   const classes = useStyles();
 
-  const leafletMapRef = React.useRef<L.Map | null>(null);
-  const refs = React.useRef<any>({});
-  const waitFor = React.useRef<Promise<any>[]>([]);
+  const bounds = [
+    [0, 0],
+    [campaign.height, campaign.width],
+  ] as L.LatLngBoundsLiteral;
+
+  const contextState = React.useRef({
+    map: null as any,
+    layers: {} as any,
+    waitFor: [] as Promise<void>[],
+    bounds,
+    campaign,
+  });
 
   const [loaded, setLoaded] = React.useState(false);
 
@@ -43,36 +55,29 @@ const Map: FC<MapProps> = ({ children, bounds }) => {
         markerZoomAnimation: true,
       });
 
-      leafletMapRef.current = leafletMap;
+      contextState.current.map = leafletMap;
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
-    const leafletMap = leafletMapRef.current!;
+    const map = contextState.current.map!;
+    const waitFor = contextState.current.waitFor!;
 
-    leafletMap.fitBounds(bounds);
+    map.fitBounds(bounds);
 
-    Promise.all(waitFor.current).then(() => {
+    Promise.all(waitFor).then(() => {
       setLoaded(true);
     });
 
     return () => {
-      leafletMap.remove();
-    }
+      map.remove();
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const layers = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      return React.cloneElement(child, { map: leafletMapRef, refs, waitFor });
-    } else {
-      return null;
-    }
-  });
 
   return (
     <div className={clsx(classes.root, { [classes.loaded]: loaded })}>
       <div ref={mapContainer} style={{ height: '100%', backgroundColor: 'transparent' }}>
-        {layers}
+        <MapContext.Provider value={contextState}>{children}</MapContext.Provider>
       </div>
     </div>
   );

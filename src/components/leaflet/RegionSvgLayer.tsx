@@ -1,11 +1,38 @@
-import React, { FC } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import L from 'leaflet';
-
+import { useMapContext } from './map-context';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { regionChanged, regionOwnerChanged, mapOverlayCreated } from '../../store/painter';
 
-const RegionPath: FC<{ region: any }> = ({ region }) => {
+const RegionSvgLayer = () => {
+  const [svgElem, setSvgElem] = React.useState<SVGSVGElement>();
+
+  const dispatch = useAppDispatch();
+  const context = useMapContext();
+
+  React.useEffect(() => {
+    const { map, layers, bounds } = context;
+    const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgElement.setAttribute('version', '1.1');
+    svgElement.setAttribute('viewBox', `0 0 ${bounds[1][1]} ${bounds[1][0]}`);
+    const layer = L.svgOverlay(svgElement, bounds);
+    map.addLayer(layer);
+    layers['region-paths'] = layer;
+    dispatch(mapOverlayCreated({
+      key: 'region-paths',
+      label: 'Region paths',
+      visible: true,
+    }));
+    setSvgElem(svgElement);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (!svgElem) return null;
+
+  return ReactDOM.createPortal(<RegionPaths selectedMap={context.campaign} />, svgElem as any);
+};
+
+const RegionPath = ({ region }: any) => {
   const dispatch = useAppDispatch();
   const selectedFaction = useAppSelector((state) => state.painter.selectedFaction);
   const isModeInteractive = useAppSelector((state) => state.painter.mode === 'interactive');
@@ -36,7 +63,7 @@ const RegionPath: FC<{ region: any }> = ({ region }) => {
   );
 };
 
-const RegionPaths: FC<{ selectedMap: any }> = ({ selectedMap }) => {
+const RegionPaths = ({ selectedMap }: any) => {
   return (
     <>
       {Object.values(selectedMap.regions).map((region: any) => (
@@ -44,39 +71,6 @@ const RegionPaths: FC<{ selectedMap: any }> = ({ selectedMap }) => {
       ))}
     </>
   );
-};
-
-type RegionSvgLayerProp = {
-  map?: React.MutableRefObject<L.Map>,
-  refs?: any,
-  selectedMap: any,
-  bounds: any,
-};
-
-const RegionSvgLayer: FC<RegionSvgLayerProp> = ({ map, refs, selectedMap, bounds }) => {
-  const [svgElem, setSvgElem] = React.useState<SVGSVGElement>();
-
-  const dispatch = useAppDispatch();
-
-  React.useEffect(() => {
-    const leafletMap = map!.current; // TODO: let it throw?
-    const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgElement.setAttribute('version', '1.1');
-    svgElement.setAttribute('viewBox', `0 0 ${bounds[1][1]} ${bounds[1][0]}`);
-    const layer = L.svgOverlay(svgElement, bounds);
-    leafletMap.addLayer(layer);
-    refs.current['region-paths'] = layer;
-    dispatch(mapOverlayCreated({
-      key: 'region-paths',
-      label: 'Region paths',
-      visible: true,
-    }));
-    setSvgElem(svgElement);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  if (!svgElem) return null;
-
-  return ReactDOM.createPortal(<RegionPaths selectedMap={selectedMap} />, svgElem as any);
 };
 
 export default RegionSvgLayer;

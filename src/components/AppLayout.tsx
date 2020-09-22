@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type AppLayoutProps = {
-  content: React.ReactElement;
+  mainContent: React.ReactElement;
   topbarContent: React.ReactElement;
   drawerContent: React.ReactElement;
 };
@@ -111,7 +111,7 @@ const AppLayout = (props: AppLayoutProps) => {
         </AppBar>
         <main className={classes.content}>
           <Toolbar />
-          {props.content}
+          {props.mainContent}
         </main>
         <nav className={classes.drawer}>
           <Hidden mdUp implementation="css">

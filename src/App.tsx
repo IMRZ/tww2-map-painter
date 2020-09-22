@@ -2,27 +2,15 @@ import React from 'react';
 import { IconButton, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { GitHub } from '@material-ui/icons';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
 import { useAppSelector } from './store';
-import Map from './components/leaflet/Map';
-import ImageLayer from './components/leaflet/ImageLayer';
-import ImageTextLayer from './components/leaflet/ImageTextLayer';
-import MapListener from './components/leaflet/MapListener';
-import RegionMarkers from './components/leaflet/RegionMarkers';
-import RegionSvgLayer from './components/leaflet/RegionSvgLayer';
-import Preloader from './components/Preloader';
-import MapSelect from './components/controls/MapSelect';
-import MapCenterButton from './components/controls/MapCenterButton';
-import PainterPane from './components/controls/PainterPane';
 
+import MapSelect from './components/controls/MapSelect';
+import PainterPane from './components/controls/PainterPane';
 import AppLayout from './components/AppLayout';
 
+import CampaignMap from './components/CampaignMap';
+
 const useStyles = makeStyles((theme) => ({
-  map: {
-    position: 'relative',
-    flex: 1,
-  },
   github: {
     [theme.breakpoints.up('md')]: {
       marginRight: -12,
@@ -32,11 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  const selectedMap = useAppSelector((state) => state.painter.selectedMap);
-  const bounds = [
-    [0, 0],
-    [selectedMap.height, selectedMap.width],
-  ] as L.LatLngBoundsLiteral;
+  const selectedCampaign = useAppSelector((state) => state.painter.selectedMap);
 
   const topbarContent = (
     <>
@@ -69,26 +53,12 @@ function App() {
     </>
   );
 
-  const content = (
-    <div className={classes.map} key={selectedMap.key}>
-      <Preloader assets={[selectedMap.map, selectedMap.mapText]}>
-        <Map bounds={bounds}>
-          <ImageLayer image={selectedMap.map} bounds={bounds} />
-          <ImageTextLayer image={selectedMap.mapText} bounds={bounds} />
-          <RegionSvgLayer selectedMap={selectedMap} bounds={bounds} />
-          <RegionMarkers selectedMap={selectedMap} />
-          <MapListener selectedMap={selectedMap} />
-          <MapCenterButton />
-        </Map>
-      </Preloader>
-    </div>
-  );
-
+  const mainContent = <CampaignMap campaign={selectedCampaign} />;
   const drawerContent = <PainterPane />;
 
   return (
     <AppLayout
-      content={content}
+      mainContent={mainContent}
       topbarContent={topbarContent}
       drawerContent={drawerContent}
     />

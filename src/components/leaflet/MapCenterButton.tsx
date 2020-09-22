@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
-import L from 'leaflet';
+import React, { useCallback } from 'react';
 import { Fab } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { FilterCenterFocus } from '@material-ui/icons';
+import { useMapContext } from './map-context';
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -13,21 +13,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-type MapCenterButtonProps = {
-  map?: React.MutableRefObject<L.Map>;
-};
-
-const MapCenterButton: FC<MapCenterButtonProps> = ({ map }) => {
+const MapCenterButton = () => {
   const classes = useStyles();
+  const context = useMapContext();
 
-  const onClick = () => {
-    const leafletMap = map?.current;
-
-    if (leafletMap) {
-      // @ts-ignore
-      leafletMap.flyToBounds(leafletMap.options.maxBounds);
-    }
-  };
+  const onClick = useCallback(() => {
+    const { map, bounds } = context;
+    map.flyToBounds(bounds);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Fab size="medium" color="primary" className={classes.fab} onClick={onClick}>

@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import L from 'leaflet';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { useMapContext } from './map-context';
 import assets from '../../assets';
 
 import { useAppSelector, useAppDispatch } from '../../store';
@@ -30,6 +30,42 @@ const useStyles = makeStyles({
 const abandonedIcon = assets['icons/abandoned'];
 const pointerArrowIcon = assets['icons/pointer_arrow'];
 
+const RegionMarkers = () => {
+  const [elems, setElems] = React.useState<[HTMLElement, any][]>([]);
+
+  const dispatch = useAppDispatch();
+  const context = useMapContext();
+
+  React.useEffect(() => {
+    const { map, campaign, layers } = context;
+    const elements: [HTMLElement, any][] = [];
+
+    const markers = Object.values(campaign.regions).map((region: any) => {
+      const { x, y } = region.settlement;
+      const el = document.createElement('div');
+      el.setAttribute('style', 'display: flex; height: 0; width: 0; align-items: center; justify-content: center; position: relative;');
+      const icon = createPortalMarker({ element: el });
+      const marker = L.marker([y, x], { icon });
+      elements.push([el, region]);
+      return marker;
+    });
+
+    setElems(elements);
+
+    const layer = L.layerGroup(markers);
+    map.addLayer(layer);
+    layers['region-owner-markers'] = layer
+    dispatch(mapOverlayCreated({
+      key: 'region-owner-markers',
+      label: 'Region owner makers',
+      visible: true,
+    }));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // attach portals to current tree
+  return <>{elems.map(([e, region]) => ReactDOM.createPortal(<Marker regionKey={region.key} />, e))}</>
+};
+
 const PortalMarker = L.DivIcon.extend({
   options: {
     element: null,
@@ -44,7 +80,7 @@ function createPortalMarker(options: any) {
   return new PortalMarker(options);
 }
 
-const Marker: FC<{ regionKey: string }> = ({ regionKey }) => {
+const Marker = ({ regionKey }: any) => {
   const classes = useStyles();
 
   const dispatch = useAppDispatch();
@@ -86,46 +122,4 @@ const Marker: FC<{ regionKey: string }> = ({ regionKey }) => {
   );
 };
 
-type Props = {
-  map?: React.MutableRefObject<L.Map>,
-  refs?: any,
-  selectedMap: any,
-};
-
-const PortalMarkers: FC<Props> = ({ map, refs, selectedMap }) => {
-  const [elems, setElems] = React.useState<[HTMLElement, any][]>([]);
-
-  const dispatch = useAppDispatch();
-
-  React.useEffect(() => {
-    const leafletMap = map!.current; // TODO: let it throw?
-
-    const elements: [HTMLElement, any][] = [];
-
-    const markers = Object.values(selectedMap.regions).map((region: any) => {
-      const { x, y } = region.settlement;
-      const el = document.createElement('div');
-      el.setAttribute('style', 'display: flex; height: 0; width: 0; align-items: center; justify-content: center; position: relative;');
-      const icon = createPortalMarker({ element: el });
-      const marker = L.marker([y, x], { icon });
-      elements.push([el, region]);
-      return marker;
-    });
-
-    setElems(elements);
-
-    const layer = L.layerGroup(markers);
-    leafletMap.addLayer(layer);
-    refs.current['region-owner-markers'] = layer
-    dispatch(mapOverlayCreated({
-      key: 'region-owner-markers',
-      label: 'Region owner makers',
-      visible: true,
-    }));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // attach portals to current tree
-  return <>{elems.map(([e, region]) => ReactDOM.createPortal(<Marker regionKey={region.key} />, e))}</>
-};
-
-export default PortalMarkers;
+export default RegionMarkers;

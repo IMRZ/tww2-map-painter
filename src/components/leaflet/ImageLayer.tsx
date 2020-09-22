@@ -1,25 +1,21 @@
-import React, { FC } from 'react';
+import React from 'react';
 import L from 'leaflet';
+import { useMapContext } from './map-context';
 
-type ImageLayerProps = {
-  map?: React.MutableRefObject<L.Map>,
-  image: string,
-  bounds: L.LatLngBoundsLiteral,
-  waitFor?: React.MutableRefObject<Promise<any>[]>,
-};
+const ImageLayer = () => {
+  const context = useMapContext();
 
-const ImageLayer: FC<ImageLayerProps> = ({ map, image, bounds, waitFor }) => {
   React.useEffect(() => {
-    const leafletMap = map!.current; // TODO: let it throw?
-    const imageOverlay = L.imageOverlay(image, bounds, {});
+    const { campaign, map, bounds, waitFor } = context;
+    const imageOverlay = L.imageOverlay(campaign.map, bounds, {});
 
-    const imageOverlayLoaded = new Promise((resolve) => {
+    const onLoad = new Promise<void>((resolve) => {
       imageOverlay.on('load', () => resolve());
     });
-    waitFor?.current.push(imageOverlayLoaded);
+    waitFor.push(onLoad);
 
-    leafletMap.addLayer(imageOverlay);
-  }, [map]); // eslint-disable-line
+    map.addLayer(imageOverlay);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return null;
 };
