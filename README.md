@@ -9,10 +9,10 @@
 
 ## Getting started
 ``` bash
-# git-lfs is used for images
+# Install git-lfs
 sudo apt install git-lfs
 
-# clone the repo
+# Clone the repo
 git clone git@github.com:IMRZ/tww2-map-painter.git
 
 # Install dependencies
