@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { GitHub } from '@material-ui/icons';
 import { useAppSelector } from './store';
 
-import MapSelect from './components/controls/MapSelect';
+import CampaignSelect from './components/controls/CampaignSelect';
 import PainterPane from './components/controls/PainterPane';
 import AppLayout from './components/AppLayout';
 
@@ -38,7 +38,7 @@ function App() {
           Total War: Warhammer II
         </Typography>
       </div>
-      <MapSelect />
+      <CampaignSelect />
       <span style={{ flex: 1 }}></span>
       <IconButton
         className={classes.github}
