@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { Campaign } from '../types/Campaign';
 import Preloader from './Preloader';
 import Map from './map/Map';
 import MapImageLayer from './map/MapImageLayer';
@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 type CampaignMapProps = {
-  campaign: any;
+  campaign: Campaign;
 };
 
 const CampaignMap = (props: CampaignMapProps) => {
@@ -27,7 +27,7 @@ const CampaignMap = (props: CampaignMapProps) => {
 
   return (
     <div className={classes.map} key={campaign.key}>
-      <Preloader assets={[campaign.map, campaign.mapText]}>
+      <Preloader assets={[campaign.map.image, campaign.map.imageText]}>
         <Map campaign={campaign}>
           <MapImageLayer />
           <MapImageTextLayer />
