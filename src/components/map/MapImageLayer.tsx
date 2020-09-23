@@ -1,8 +1,8 @@
 import React from 'react';
 import L from 'leaflet';
-import { useMapContext } from './map-context';
+import { useMapContext } from './map';
 
-const ImageLayer = () => {
+const MapImageLayer = () => {
   const context = useMapContext();
 
   React.useEffect(() => {
@@ -20,4 +20,4 @@ const ImageLayer = () => {
   return null;
 };
 
-export default ImageLayer;
+export default MapImageLayer;

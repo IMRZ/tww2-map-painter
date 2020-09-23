@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAppSelector } from '../../store';
-import { useMapContext } from './map-context';
+import { useMapContext } from './map';
 
-const MapListener = () => {
+const MapEventListener = () => {
   const context = useMapContext();
 
   const selectedRegion = useAppSelector((state) => state.painter.selectedRegion);
@@ -42,4 +42,4 @@ const MapListener = () => {
   return null;
 };
 
-export default MapListener;
+export default MapEventListener;

@@ -2,12 +2,12 @@ import React, { useCallback } from 'react';
 import L from 'leaflet';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { MapContext } from './map-context';
+import { MapContext } from './map';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%',
-    transition: 'opacity 2s',
+    transition: 'opacity 1s',
     opacity: 0,
   },
   loaded: {

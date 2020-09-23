@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import L from 'leaflet';
 import { makeStyles } from '@material-ui/core/styles';
-import { useMapContext } from './map-context';
+import { useMapContext } from './map';
 import assets from '../../assets';
 
 import { useAppSelector, useAppDispatch } from '../../store';
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 const abandonedIcon = assets['icons/abandoned'];
 const pointerArrowIcon = assets['icons/pointer_arrow'];
 
-const RegionMarkers = () => {
+const RegionMarkerLayer = () => {
   const [elems, setElems] = React.useState<[HTMLElement, any][]>([]);
 
   const dispatch = useAppDispatch();
@@ -122,4 +122,4 @@ const Marker = ({ regionKey }: any) => {
   );
 };
 
-export default RegionMarkers;
+export default RegionMarkerLayer;

@@ -1,10 +1,10 @@
 import React from 'react';
 import L from 'leaflet';
-import { useMapContext } from './map-context';
+import { useMapContext } from './map';
 import { useAppDispatch } from '../../store';
 import { mapOverlayCreated } from '../../store/painter';
 
-const ImageTextLayer = () => {
+const MapImageTextLayer = () => {
   const dispatch = useAppDispatch();
   const context = useMapContext();
 
@@ -33,4 +33,4 @@ const ImageTextLayer = () => {
   return null;
 };
 
-export default ImageTextLayer;
+export default MapImageTextLayer;
