@@ -38,10 +38,10 @@ const PainterPane: FC = () => {
     setOverlayVisible,
   } = useStore();
 
-  const selectedMap = useAppSelector((state) => state.painter.selectedMap);
+  const selectedCampaign = useAppSelector((state) => state.painter.campaign);
   const overlays = useAppSelector((state) => state.painter.overlays);
 
-  const regionOptions = Object.values(selectedMap.regions).reduce((accumulator: any[], region: any) => {
+  const regionOptions = Object.values(selectedCampaign.regions).reduce((accumulator: any[], region: any) => {
     accumulator.push({
       key: region.key,
       name: region.name,

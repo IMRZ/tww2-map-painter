@@ -26,7 +26,7 @@ const Map = (props: MapProps) => {
 
   const bounds = [
     [0, 0],
-    [campaign.height, campaign.width],
+    [campaign.map.height, campaign.map.width],
   ] as L.LatLngBoundsLiteral;
 
   const contextState = React.useRef({

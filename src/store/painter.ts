@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import assets from '../assets';
-import maps from '../data/maps';
+import campaigns from '../data/campaigns';
 import factions from '../data/factions';
 import presets from '../data/presets';
 
-const DEFAULT_MAP = maps.mortal;
-const DEFAULT_PRESETS = presets[DEFAULT_MAP.key];
+const DEFAULT_CAMPAIGN = campaigns.mortal;
+const DEFAULT_PRESETS = presets[DEFAULT_CAMPAIGN.key];
 const DEFAULT_PRESET_MORTAL = presets['mortal']['reikland'];
 const DEFAULT_PRESET_VORTEX = presets['vortex']['default'];
 
-const DEFAULT_MAP_STATE = Object.values(DEFAULT_MAP.regions).reduce((accumulator: { [key: string]: any }, region: any) => {
+const DEFAULT_MAP_STATE = Object.values(DEFAULT_CAMPAIGN.regions).reduce((accumulator: { [key: string]: any }, region: any) => {
   accumulator[region.key] = DEFAULT_PRESET_MORTAL.ownership[region.key];
   return accumulator;
 }, {});
@@ -41,7 +41,7 @@ type MapOverlay = {
 };
 
 const INITIAL_STATE = {
-  selectedMap: DEFAULT_MAP,
+  campaign: DEFAULT_CAMPAIGN,
   factions: DEFAULT_ALL_FACTION_COMBINED,
   groups: DEFAULT_FACTION_GROUPS,
   ownership: DEFAULT_MAP_STATE,
@@ -66,12 +66,12 @@ const painterSlice = createSlice({
   reducers: {
     mapChanged: (state, action) => {
       const mapKey = action.payload as string;
-      state.selectedMap = maps[mapKey];
+      state.campaign = campaigns[mapKey];
       state.selectedRegion = null;
       state.selectedFaction = null;
       state.presets = presets[mapKey];
       const defaultPreset = mapKey === 'mortal' ? DEFAULT_PRESET_MORTAL.ownership : DEFAULT_PRESET_VORTEX.ownership;
-      state.ownership = Object.values(maps[mapKey].regions).reduce((accumulator: { [key: string]: any }, region: any) => {
+      state.ownership = Object.values(campaigns[mapKey].regions).reduce((accumulator: { [key: string]: any }, region: any) => {
         accumulator[region.key] = defaultPreset[region.key];
         return accumulator;
       }, {});

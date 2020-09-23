@@ -7,7 +7,7 @@ const MapImageLayer = () => {
 
   React.useEffect(() => {
     const { campaign, map, bounds, waitFor } = context;
-    const imageOverlay = L.imageOverlay(campaign.map, bounds, {});
+    const imageOverlay = L.imageOverlay(campaign.map.image, bounds, {});
 
     const onLoad = new Promise<void>((resolve) => {
       imageOverlay.on('load', () => resolve());

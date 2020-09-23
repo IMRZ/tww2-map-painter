@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  const selectedCampaign = useAppSelector((state) => state.painter.selectedMap);
+  const selectedCampaign = useAppSelector((state) => state.painter.campaign);
 
   const topbarContent = (
     <>

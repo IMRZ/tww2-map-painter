@@ -14,7 +14,7 @@ const MapImageTextLayer = () => {
     map.createPane('labels');
     map.getPane('labels')?.style.setProperty('zIndex', '450');
     map.getPane('labels')?.style.setProperty('pointerEvents', 'none');
-    const imageOverlay = L.imageOverlay(campaign.mapText, bounds, { pane: 'labels' });
+    const imageOverlay = L.imageOverlay(campaign.map.imageText, bounds, { pane: 'labels' });
     map.addLayer(imageOverlay);
 
     const onLoad = new Promise<void>((resolve) => {

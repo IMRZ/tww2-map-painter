@@ -12,7 +12,7 @@ const RegionAreaLayer = () => {
   React.useEffect(() => {
     const { map, bounds, campaign, addOverlay } = context;
 
-    const svgElement = createSvgElement(campaign.width, campaign.height);
+    const svgElement = createSvgElement(campaign.map.width, campaign.map.height);
     const layer = L.svgOverlay(svgElement, bounds);
     map.addLayer(layer);
     addOverlay('region-paths', 'Region paths', layer);
@@ -21,11 +21,11 @@ const RegionAreaLayer = () => {
 
   if (svgElem === null) return null;
 
-  return ReactDOM.createPortal(<RegionPaths selectedMap={context.campaign} />, svgElem);
+  return ReactDOM.createPortal(<RegionPaths campaign={context.campaign} />, svgElem);
 };
 
-const RegionPaths = ({ selectedMap }: any) => {
-  const paths = Object.values(selectedMap.regions).map((region: any) => (
+const RegionPaths = ({ campaign }: any) => {
+  const paths = Object.values(campaign.regions).map((region: any) => (
     <RegionPath key={region.key} region={region} />
   ));
   return <>{paths}</>;
