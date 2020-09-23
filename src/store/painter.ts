@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import assets from '../assets';
 import campaigns from '../data/campaigns';
@@ -64,8 +64,8 @@ const painterSlice = createSlice({
   name: 'painter',
   initialState: INITIAL_STATE,
   reducers: {
-    mapChanged: (state, action) => {
-      const mapKey = action.payload as string;
+    mapChanged: (state, action: PayloadAction<string>) => {
+      const mapKey = action.payload as keyof typeof campaigns;
       state.campaign = campaigns[mapKey];
       state.selectedRegion = null;
       state.selectedFaction = null;

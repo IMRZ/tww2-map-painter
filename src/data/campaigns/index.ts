@@ -13,7 +13,9 @@ type Campaign = {
   readonly regions: any;
 };
 
-export default {
+const campaigns = Object.freeze({
   mortal,
   vortex,
-} as { [key: string]: Campaign };
+});
+
+export default campaigns as Readonly<{ [K in keyof typeof campaigns]: Campaign }>;
