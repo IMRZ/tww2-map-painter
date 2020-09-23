@@ -2,6 +2,7 @@ import { createContext, useContext, useMemo } from 'react';
 import L from 'leaflet';
 import { useAppDispatch } from '../../store';
 import { mapOverlayCreated } from '../../store/painter';
+import { Campaign } from '../../types/Campaign';
 
 type MapLayerLookup = { [key: string]: L.Layer };
 
@@ -10,7 +11,7 @@ type MapContextState = React.MutableRefObject<{
   layers: MapLayerLookup;
   waitFor: Promise<void>[];
   bounds: L.LatLngBoundsLiteral;
-  campaign: any;
+  campaign: Campaign;
 }>;
 
 export const MapContext = createContext<MapContextState | null>(null);
@@ -33,7 +34,7 @@ export function useMapContext() {
       get bounds(): L.LatLngBoundsLiteral {
         return context?.current.bounds!;
       },
-      get campaign(): any {
+      get campaign(): Campaign {
         return context?.current.campaign!;
       },
       addOverlay: (key: string, label: string, layer: L.Layer) => {

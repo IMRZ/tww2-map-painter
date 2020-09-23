@@ -3,6 +3,7 @@ import L from 'leaflet';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { MapContext } from './map';
+import { Campaign } from '../../types/Campaign';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 type MapProps = {
   children: React.ReactNode;
-  campaign: any;
+  campaign: Campaign;
 };
 
 const Map = (props: MapProps) => {

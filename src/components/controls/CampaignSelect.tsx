@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MapSelect: FC = () => {
+const CampaignSelect: FC = () => {
   const classes = useStyles();
 
   const dispatch = useAppDispatch();
@@ -27,11 +27,13 @@ const MapSelect: FC = () => {
         onChange={(e) => selectMap(e.target.value as string)}
       >
         {Object.values(campaigns).map((campaign) => (
-          <MenuItem value={campaign.key}>{campaign.name}</MenuItem>
+          <MenuItem key={campaign.key} value={campaign.key}>
+            {campaign.name}
+          </MenuItem>
         ))}
       </Select>
     </FormControl>
   );
 };
 
-export default MapSelect;
+export default CampaignSelect;
