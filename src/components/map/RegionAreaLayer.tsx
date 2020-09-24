@@ -10,53 +10,60 @@ const RegionAreaLayer = () => {
   const context = useMapContext();
 
   React.useEffect(() => {
-    const { map, bounds, campaign, addOverlay } = context;
+    const { map, bounds, campaign } = context;
 
     const svgElement = createSvgElement(campaign.map.width, campaign.map.height);
     const layer = L.svgOverlay(svgElement, bounds);
     map.addLayer(layer);
-    addOverlay('region-paths', 'Region paths', layer);
+    context.addOverlay('region-paths', 'Region paths', layer);
     setSvgElem(svgElement);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (svgElem === null) return null;
 
-  return ReactDOM.createPortal(<RegionPaths campaign={context.campaign} />, svgElem);
-};
-
-const RegionPaths = ({ campaign }: any) => {
-  const paths = Object.values(campaign.regions).map((region: any) => (
+  const regionpaths = Object.values(context.campaign.regions).map((region: any) => (
     <RegionPath key={region.key} region={region} />
   ));
-  return <>{paths}</>;
+
+  return ReactDOM.createPortal(regionpaths, svgElem);
 };
 
-const RegionPath = ({ region }: any) => {
-  const dispatch = useAppDispatch();
-  const selectedFaction = useAppSelector((state) => state.painter.selectedFaction);
-  const isModeInteractive = useAppSelector((state) => state.painter.mode === 'interactive');
+type Region = {
+  key: string;
+  d: string;
+};
 
-  const onClick = () => {
+const RegionPath = (props: { region: Region }) => {
+  const { region } = props;
+  const { fillColor, onClickRegion } = useRegionPath(region);
+  const pathStyle = { fill: fillColor, fillOpacity: 0.4, stroke: 'black', strokeWidth: 1 };
+
+  return (
+    <path className="leaflet-interactive" onClick={onClickRegion} d={region.d} style={pathStyle} />
+  );
+};
+
+function useRegionPath(region: Region) {
+  const fillColor = useAppSelector((state) => {
+    const factionKey = state.painter.ownership[region.key];
+    return factionKey ? state.painter.factions[factionKey].color : 'transparent';
+  });
+
+  const dispatch = useAppDispatch();
+  const isModeInteractive = useAppSelector((state) => state.painter.mode === 'interactive');
+  const selectedFaction = useAppSelector((state) => state.painter.selectedFaction);
+  const onClickRegion = React.useCallback(() => {
     if (isModeInteractive) {
       dispatch(regionChanged(region.key));
     } else {
       dispatch(regionOwnerChanged([region.key, selectedFaction]));
     }
+  }, [region.key, dispatch, isModeInteractive, selectedFaction]);
+
+  return {
+    fillColor,
+    onClickRegion,
   };
-
-  const fill = useAppSelector((state) => {
-    const factionKey = state.painter.ownership[region.key];
-    return factionKey ? state.painter.factions[factionKey].color : 'transparent';
-  });
-
-  return (
-    <path
-      onClick={onClick}
-      className="leaflet-interactive"
-      d={region.d}
-      style={{ fill: fill, fillOpacity: 0.4, stroke: 'black', strokeWidth: 1 }}
-    />
-  );
-};
+}
 
 export default RegionAreaLayer;

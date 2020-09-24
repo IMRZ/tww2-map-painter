@@ -1,33 +1,24 @@
 import React from 'react';
 import L from 'leaflet';
 import { useMapContext } from './map';
-import { useAppDispatch } from '../../store';
-import { mapOverlayCreated } from '../../store/painter';
 
 const MapImageTextLayer = () => {
-  const dispatch = useAppDispatch();
   const context = useMapContext();
 
   React.useEffect(() => {
-    const { map, layers, campaign, bounds, waitFor } = context;
+    const { map, campaign, bounds, waitFor } = context;
 
-    map.createPane('labels');
-    map.getPane('labels')?.style.setProperty('zIndex', '450');
-    map.getPane('labels')?.style.setProperty('pointerEvents', 'none');
-    const imageOverlay = L.imageOverlay(campaign.map.imageText, bounds, { pane: 'labels' });
-    map.addLayer(imageOverlay);
+    const pane = map.createPane('labels');
+    pane.style.setProperty('z-index', '450');
+    pane.style.setProperty('pointer-events', 'none');
 
+    const layer = L.imageOverlay(campaign.map.imageText, bounds, { pane: 'labels' });
     const onLoad = new Promise<void>((resolve) => {
-      imageOverlay.on('load', () => resolve());
+      layer.on('load', () => resolve());
     });
     waitFor.push(onLoad);
-
-    layers['map-text'] = imageOverlay;
-    dispatch(mapOverlayCreated({
-      key: 'map-text',
-      label: 'map-text',
-      visible: true,
-    }));
+    map.addLayer(layer);
+    context.addOverlay('map-text', 'Map text', layer);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return null;

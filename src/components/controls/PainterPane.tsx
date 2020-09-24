@@ -225,7 +225,7 @@ const PainterPane = () => {
       <Divider />
 
       <List subheader={<ListSubheader>Map layers</ListSubheader>}>
-        {overlays['region-owner-markers'] !== undefined && (
+        {overlays['region-markers'] !== undefined && (
           <ListItem dense>
             <ListItemIcon>
               <Layers />
@@ -235,8 +235,8 @@ const PainterPane = () => {
               <Switch
                 edge="end"
                 color="primary"
-                onChange={(e, checked) => setOverlayVisible('region-owner-markers', checked)}
-                checked={overlays['region-owner-markers'].visible}
+                onChange={(e, checked) => setOverlayVisible('region-markers', checked)}
+                checked={overlays['region-markers'].visible}
               />
             </ListItemSecondaryAction>
           </ListItem>
