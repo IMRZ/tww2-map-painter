@@ -8,9 +8,9 @@ import appTheme from './components/app-theme';
 import { Provider } from 'react-redux';
 import store from './store';
 
-import 'leaflet/dist/leaflet.css';
 import './index.css';
 import App from './App';
+import 'leaflet/dist/leaflet.css';
 
 ReactDOM.render(
   <ThemeProvider theme={appTheme}>
