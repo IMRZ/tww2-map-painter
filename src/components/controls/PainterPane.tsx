@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from 'react';
-import { Box, TextField, Tabs, Tab, List, ListSubheader, ListItem, ListItemText, ListItemSecondaryAction, Switch, Divider, ListItemIcon } from '@material-ui/core';
+import { TextField, Tabs, Tab, List, ListSubheader, ListItem, ListItemText, ListItemSecondaryAction, Switch, Divider, ListItemIcon } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 import { Layers } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,7 +10,16 @@ import FactionAutocomplete from './FactionAutocomplete';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flex: 1,
+    height: '100%',
+    overflowY: 'auto',
+    '&::-webkit-scrollbar': {
+      width: 12,
+      backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    },
+    '&::-webkit-scrollbar-thumb:vertical': {
+      margin: 5,
+      backgroundColor: 'rgba(255, 255, 255, 0.24)',
+    },
   },
   content: {
     padding: theme.spacing(2, 2),
@@ -81,7 +90,7 @@ const PainterPane: FC = () => {
   const painterFaction = factionOptions.find((f) => f.key === painter.selectedFaction) ?? null;
 
   return (
-    <Box className={classes.root}>
+    <div className={classes.root}>
       <Tabs variant="fullWidth" indicatorColor="primary" value={painter.mode} onChange={(event, mode) => selectMode(mode)}>
         <Tab label="Interactive mode" value="interactive" />
         <Tab label="Paint mode" value="painter" />
@@ -257,7 +266,7 @@ const PainterPane: FC = () => {
           </ListItem>
         )}
       </List>
-    </Box>
+    </div>
   );
 };
 

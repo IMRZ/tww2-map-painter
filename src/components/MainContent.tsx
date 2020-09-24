@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Campaign } from '../types/Campaign';
+import { useAppSelector } from '../store';
 import Preloader from './Preloader';
 import Map from './map/Map';
 import MapImageLayer from './map/MapImageLayer';
@@ -17,12 +17,8 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-type CampaignMapProps = {
-  campaign: Campaign;
-};
-
-const CampaignMap = (props: CampaignMapProps) => {
-  const { campaign } = props;
+const MainContent = () => {
+  const campaign = useAppSelector((state) => state.painter.campaign);
   const classes = useStyles();
 
   return (
@@ -41,4 +37,4 @@ const CampaignMap = (props: CampaignMapProps) => {
   )
 };
 
-export default CampaignMap;
+export default MainContent;
