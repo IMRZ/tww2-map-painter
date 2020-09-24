@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { TextField, InputAdornment } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
 import assets from '../../assets';
-
 const abandonedIcon = assets['icons/abandoned'];
 
 type FactionAutocompleteProps = {
@@ -17,7 +16,7 @@ type FactionAutocompleteProps = {
   onChange: (event: React.ChangeEvent<{}>, value: any) => void;
 };
 
-const FactionAutocomplete: FC<FactionAutocompleteProps> = ({
+const FactionAutocomplete = ({
   options = [],
   value = null,
   disabled = false,
@@ -26,7 +25,7 @@ const FactionAutocomplete: FC<FactionAutocompleteProps> = ({
   placeholder,
   helperText,
   onChange,
-}) => {
+}: FactionAutocompleteProps) => {
   return (
     <Autocomplete
       size="small"

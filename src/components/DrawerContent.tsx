@@ -54,10 +54,10 @@ const DrawerContent = (props: DrawerContentProps) => {
         <CampaignSelect />
         <span className={classes.fillSpace}></span>
         <IconButton
+          className={classes.toggleButton}
           color="inherit"
           edge="end"
           onClick={toggleDrawer}
-          className={classes.toggleButton}
         >
           <Close />
         </IconButton>

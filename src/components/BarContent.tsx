@@ -4,10 +4,17 @@ import { IconButton, Typography, Toolbar } from '@material-ui/core';
 import { Tune, GitHub } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
+  title: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
   github: {
     [theme.breakpoints.up('md')]: {
       marginRight: -12,
     },
+  },
+  fillSpace: {
+    flexGrow: 1,
   },
   toggleButton: {
     [theme.breakpoints.up('md')]: {
@@ -26,21 +33,15 @@ function BarContent(props: BarContentProps) {
 
   return (
     <Toolbar>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          marginRight: '1em',
-        }}
-      >
+      <div className={classes.title}>
         <Typography variant="h6" noWrap>
           Map Painter
         </Typography>
         <Typography variant="subtitle2" color="textSecondary" noWrap>
-          Total War: Warhammer II
+          Total War: WARHAMMER II
         </Typography>
       </div>
-      <span style={{ flex: 1 }}></span>
+      <span className={classes.fillSpace}></span>
       <IconButton
         className={classes.github}
         color="inherit"
@@ -52,10 +53,10 @@ function BarContent(props: BarContentProps) {
         <GitHub />
       </IconButton>
       <IconButton
+        className={classes.toggleButton}
         color="inherit"
         edge="end"
         onClick={toggleDrawer}
-        className={classes.toggleButton}
       >
         <Tune />
       </IconButton>

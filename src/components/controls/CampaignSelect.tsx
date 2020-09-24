@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { mapChanged } from '../../store/painter';
 import campaigns from '../../data/campaigns';
 
-const CampaignSelect: FC = () => {
+const CampaignSelect = () => {
   const dispatch = useAppDispatch();
   const selectedCampaign = useAppSelector((state) => state.painter.campaign);
   const selectMap = (key: string) => dispatch(mapChanged(key));

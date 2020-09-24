@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { MapContext } from './map';
 import { Campaign } from '../../types/Campaign';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: '100%',
     transition: 'opacity 1s',
