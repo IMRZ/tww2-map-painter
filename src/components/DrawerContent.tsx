@@ -2,7 +2,6 @@ import React from 'react';
 import { IconButton, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Close } from '@material-ui/icons';
-
 import CampaignSelect from './controls/CampaignSelect';
 import PainterPane from './controls/PainterPane';
 
@@ -19,11 +18,26 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 2),
     ...theme.mixins.toolbar,
   },
+  fillSpace: {
+    flexGrow: 1,
+  },
   toggleButton: {
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
   },
+  scroller: {
+    height: '100%',
+    overflowY: 'auto',
+    '&::-webkit-scrollbar': {
+      width: 6,
+      backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    },
+    '&::-webkit-scrollbar-thumb:vertical': {
+      width: 6,
+      backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    },
+  }
 }));
 
 type DrawerContentProps = {
@@ -38,7 +52,7 @@ const DrawerContent = (props: DrawerContentProps) => {
     <div className={classes.root}>
       <div className={classes.header}>
         <CampaignSelect />
-        <span style={{ flex: 1 }}></span>
+        <span className={classes.fillSpace}></span>
         <IconButton
           color="inherit"
           edge="end"
@@ -49,7 +63,7 @@ const DrawerContent = (props: DrawerContentProps) => {
         </IconButton>
       </div>
       <Divider />
-      <div style={{ flex: 1, overflow: 'hidden' }}>
+      <div className={classes.scroller}>
         <PainterPane />
       </div>
     </div>
