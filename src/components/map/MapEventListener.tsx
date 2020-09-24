@@ -16,9 +16,15 @@ const MapEventListener = () => {
     if (isFlyToEnabled && isLeafletMapReady) {
       if (selectedRegion) {
         const region = campaign.regions[selectedRegion];
-        map.flyTo([region.settlement.y, region.settlement.x], 1);
+        map.flyTo([region.settlement.y, region.settlement.x], 1, {
+          animate: true,
+          duration: 3
+        });
       } else {
-        map.flyToBounds(bounds);
+        map.flyToBounds(bounds, {
+          animate: true,
+          duration: 3
+        });
       }
     }
   }, [selectedRegion]); // eslint-disable-line react-hooks/exhaustive-deps

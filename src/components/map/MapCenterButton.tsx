@@ -19,7 +19,10 @@ const MapCenterButton = () => {
 
   const onClick = useCallback(() => {
     const { map, bounds } = context;
-    map.flyToBounds(bounds);
+    map.flyToBounds(bounds, {
+      animate: true,
+      duration: 3
+    });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
