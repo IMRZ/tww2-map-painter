@@ -37,6 +37,8 @@ const factionGroups = requireContext.keys().reduce((accumulator, filename) => {
         name: factionName,
         icon: requireContext(filename.replace('meta.json', 'mon_24.png')),
         color: factionColor,
+        group: groupKey,
+        rank: 1,
       };
     }
   }
@@ -44,4 +46,13 @@ const factionGroups = requireContext.keys().reduce((accumulator, filename) => {
   return accumulator;
 }, {});
 
-export default factionGroups;
+export interface Faction {
+  readonly key: string;
+  readonly name: string;
+  readonly icon: string;
+  readonly color: string;
+  readonly group: string;
+  readonly rank: number;
+}
+
+export default factionGroups as { [key: string]: Faction };

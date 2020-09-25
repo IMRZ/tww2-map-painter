@@ -15,7 +15,7 @@ export interface Campaign {
     readonly width: number;
     readonly height: number;
   };
-  readonly regions: { [key: string]: Region };
+  readonly regions: Record<any, Region>;
 }
 
 export interface Region {
@@ -27,6 +27,7 @@ export interface Region {
     readonly x: number;
     readonly y: number;
   };
+  readonly province: any;
 }
 
 export type CampaignKey = keyof typeof campaigns;

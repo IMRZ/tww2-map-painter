@@ -19,7 +19,7 @@ import { useAppDispatch, useAppSelector } from '../../../store';
 import FactionAutocomplete from '../FactionAutocomplete';
 
 import { importMap, mapOverlayChanged } from '../../../store/painter';
-import { usePainter } from './usePainter';
+import { usePainter } from './painter';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,9 +46,12 @@ const PainterPane = () => {
   const updateConfig = painter.updateConfig;
   const selectFaction = painter.selectFaction;
 
-  const selectedRegion = painter.options.regions.find((r) => r.key === painter.selectedRegion) ?? null;
-  const selectedFaction = painter.options.factions.find((f) => f.key === painter.ownership[selectedRegion?.key]) ?? null;
-  const selectedPainterFaction = painter.options.factions.find((f) => f.key === painter.selectedFaction) ?? null;
+  const regions = painter.campaign.regions;
+  const factions = painter.factions;
+
+  const selectedRegion = painter.selectedRegion !== null ? regions[painter.selectedRegion] : null;
+  const selectedFaction = selectedRegion !== null ?  factions[painter.ownership[selectedRegion.key]] : null;
+  const selectedPainterFaction = painter.selectedFaction !== null ? factions[painter.selectedFaction] : null;
 
   return (
     <div className={classes.root}>
@@ -89,7 +92,7 @@ const PainterPane = () => {
                 disabled={!selectedRegion}
                 showFactionIcon={!!selectedRegion}
                 placeholder={selectedRegion ? 'Abandoned' : 'Select a region first'}
-                onChange={(e, option) => selectOwner(selectedRegion?.key, option?.key ?? null)}
+                onChange={(e, option) => selectedRegion && selectOwner(selectedRegion.key, option?.key ?? null)}
               />
             </div>
             <List>

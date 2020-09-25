@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import assets from '../assets';
 import campaigns from '../data/campaigns';
-import factions from '../data/factions';
+import factions, { Faction } from '../data/factions';
 import presets from '../data/presets';
 
 const DEFAULT_CAMPAIGN = campaigns.mortal;
@@ -10,26 +10,25 @@ const DEFAULT_PRESETS = presets[DEFAULT_CAMPAIGN.key];
 const DEFAULT_PRESET_MORTAL = presets['mortal']['reikland'];
 const DEFAULT_PRESET_VORTEX = presets['vortex']['default'];
 
-const DEFAULT_MAP_STATE = Object.values(DEFAULT_CAMPAIGN.regions).reduce((accumulator: { [key: string]: any }, region: any) => {
+const DEFAULT_MAP_STATE = Object.values(DEFAULT_CAMPAIGN.regions).reduce((accumulator, region: any) => {
   accumulator[region.key] = DEFAULT_PRESET_MORTAL.ownership[region.key];
   return accumulator;
-}, {});
+}, {} as Record<any, string>);
 
-// TODO: type faction
-const DEFAULT_ALL_FACTION_COMBINED = Object.values(factions).reduce((accumulator: { [key: string]: any }, factionGroup: any) => {
-  Object.values(factionGroup.factions).forEach((faction: any) => {
+const DEFAULT_ALL_FACTION_COMBINED = Object.values(factions).reduce((accumulator, group: any) => {
+  Object.values(group.factions).forEach((faction: any) => {
     accumulator[faction.key] = faction;
   });
 
   return accumulator;
-}, {});
+}, {} as Record<any, Faction>);
 
-const DEFAULT_FACTION_GROUPS = Object.values(factions).reduce((accumulator: { [key: string]: any }, factionGroup: any) => {
+const DEFAULT_FACTION_GROUPS = Object.values(factions).reduce((accumulator, factionGroup: any) => {
   const factionGroupKeys = Object.keys(factionGroup.factions);
   accumulator[factionGroup.name] = factionGroupKeys;
 
   return accumulator;
-}, {});
+}, {} as Record<any, any>);
 
 export const PainterMode = {
   Interactive: 'interactive',
@@ -37,8 +36,6 @@ export const PainterMode = {
 } as const;
 export type PainterModeKey = typeof PainterMode[keyof typeof PainterMode];
 
-type RegionKey = string | null;
-type FactionKey = string | null;
 type MapOverlay = {
   key: string;
   label: string;
@@ -50,7 +47,6 @@ const INITIAL_STATE = {
   factions: DEFAULT_ALL_FACTION_COMBINED,
 
   importedFactions: new Array<string>(),
-  importedLookup: {},
 
   groups: DEFAULT_FACTION_GROUPS,
   ownership: DEFAULT_MAP_STATE,
@@ -61,7 +57,7 @@ const INITIAL_STATE = {
 
   presets: DEFAULT_PRESETS,
 
-  overlays: {} as { [key: string]: MapOverlay },
+  overlays: {} as Record<any, MapOverlay>,
 
   config: {
     flyToEnabled: true,
@@ -129,7 +125,10 @@ const painterSlice = createSlice({
             const importedFaction = {
               key: factionKey,
               name: factionKey,
-              icon: assets['icons/imported']
+              icon: assets['icons/imported'],
+              color: 'black',
+              group: 'Imported',
+              rank: 0,
             };
             state.importedFactions.push(importedFaction.key);
             state.factions[importedFaction.key] = importedFaction;

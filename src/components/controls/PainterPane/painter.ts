@@ -20,7 +20,7 @@ export function usePainter() {
 
   const dispatch = useAppDispatch();
   const selectMode = (mode: string) => dispatch(modeChanged(mode));
-  const selectRegion = (regionKey: string) => {
+  const selectRegion = (regionKey: string | null) => {
     if (mode === 'interactive') {
       dispatch(regionChanged(regionKey));
     } else {
@@ -28,42 +28,17 @@ export function usePainter() {
     }
   };
 
-  const selectOwner = (regionKey: string, factionKey: string) => dispatch(regionOwnerChanged([regionKey, factionKey]));
+  const selectOwner = (regionKey: string, factionKey: string | null) => dispatch(regionOwnerChanged([regionKey, factionKey]));
   const updateConfig = (config: any) => dispatch(updateConfiguration(config));
   const selectFaction = (factionKey: string | null) => dispatch(factionChanged(factionKey));
 
   const regionOptions = useMemo(() => {
     return Object.values(campaign.regions).sort((a: any, b: any) => a.province.name.localeCompare(b.province.name));
-  }, [campaign.regions]) as any[];
+  }, [campaign.regions]);
 
   const factionOptions = useMemo(() => {
-    const opts = Object.entries(groups).reduce(
-      (accumulator: any[], [groupName, facts]) => {
-        facts.forEach((factionKey: string) => {
-          const f = factions[factionKey];
-          accumulator.push({
-            ...f,
-            group: groupName,
-          });
-        });
-
-        return accumulator;
-      },
-      []
-    );
-
-    if (importedFactions.length) {
-      importedFactions.forEach((factionKey: string) => {
-        const f = factions[factionKey];
-        opts.unshift({
-          ...f,
-          group: 'Imported',
-        });
-      });
-    }
-
-    return opts;
-  }, [factions, groups, importedFactions]);
+    return Object.values(factions).sort((a, b) => a.rank - b.rank);
+  }, [factions]);
 
   const options = {
     regions: regionOptions,
