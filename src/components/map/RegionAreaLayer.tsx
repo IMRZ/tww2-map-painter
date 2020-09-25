@@ -4,6 +4,7 @@ import L from 'leaflet';
 import { useMapContext, createSvgElement } from './map';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { regionChanged, regionOwnerChanged } from '../../store/painter';
+import { Region } from '../../data/campaigns';
 
 const RegionAreaLayer = () => {
   const [svgElem, setSvgElem] = useState<SVGSVGElement | null>(null);
@@ -26,11 +27,6 @@ const RegionAreaLayer = () => {
   ));
 
   return ReactDOM.createPortal(regionpaths, svgElem);
-};
-
-type Region = {
-  key: string;
-  d: string;
 };
 
 const RegionPath = (props: { region: Region }) => {

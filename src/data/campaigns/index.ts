@@ -15,7 +15,18 @@ export interface Campaign {
     readonly width: number;
     readonly height: number;
   };
-  readonly regions: any;
+  readonly regions: { [key: string]: Region };
+}
+
+export interface Region {
+  readonly key: string;
+  readonly name: string;
+  readonly fill: string;
+  readonly d: string;
+  readonly settlement: {
+    readonly x: number;
+    readonly y: number;
+  };
 }
 
 export type CampaignKey = keyof typeof campaigns;

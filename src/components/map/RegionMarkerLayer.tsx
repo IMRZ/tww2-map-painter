@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useMapContext } from './map';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { regionChanged, regionOwnerChanged } from '../../store/painter';
+import { Region } from '../../data/campaigns';
 
 import assets from '../../assets';
 const abandonedIcon = assets['icons/abandoned'];
