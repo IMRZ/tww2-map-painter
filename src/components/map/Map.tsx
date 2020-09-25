@@ -3,7 +3,7 @@ import L from 'leaflet';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { MapContext } from './map';
-import { Campaign } from '../../types/Campaign';
+import { Campaign } from '../../data/campaigns';
 
 const useStyles = makeStyles(() => ({
   root: {

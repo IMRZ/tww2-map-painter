@@ -14,6 +14,7 @@ type FactionAutocompleteProps = {
   placeholder?: string;
   helperText?: string;
   onChange: (event: React.ChangeEvent<{}>, value: any) => void;
+  getOptionSelected?: (option: any, value: any) => boolean;
 };
 
 const FactionAutocomplete = ({
@@ -25,12 +26,14 @@ const FactionAutocomplete = ({
   placeholder,
   helperText,
   onChange,
+  getOptionSelected,
 }: FactionAutocompleteProps) => {
   return (
     <Autocomplete
       size="small"
       options={options}
       value={value}
+      getOptionSelected={getOptionSelected}
       onChange={onChange}
       groupBy={(option) => option.group}
       getOptionLabel={(option) => option.name}

@@ -31,7 +31,12 @@ const DEFAULT_FACTION_GROUPS = Object.values(factions).reduce((accumulator: { [k
   return accumulator;
 }, {});
 
-type Mode = 'interactive' | 'painter';
+export const PainterMode = {
+  Interactive: 'interactive',
+  Painter: "painter"
+} as const;
+export type PainterModeKey = typeof PainterMode[keyof typeof PainterMode];
+
 type RegionKey = string | null;
 type FactionKey = string | null;
 type MapOverlay = {
@@ -43,13 +48,16 @@ type MapOverlay = {
 const INITIAL_STATE = {
   campaign: DEFAULT_CAMPAIGN,
   factions: DEFAULT_ALL_FACTION_COMBINED,
+
+  importedFactions: new Array<string>(),
+  importedLookup: {},
+
   groups: DEFAULT_FACTION_GROUPS,
   ownership: DEFAULT_MAP_STATE,
-  importedFactions: new Array<string>(),
-  mode: 'interactive' as Mode,
+  mode: PainterMode.Interactive as PainterModeKey,
 
-  selectedRegion: null as RegionKey,
-  selectedFaction: null as FactionKey,
+  selectedRegion: null as string | null,
+  selectedFaction: null as string | null,
 
   presets: DEFAULT_PRESETS,
 

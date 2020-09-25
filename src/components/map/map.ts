@@ -2,7 +2,7 @@ import { createContext, useContext, useMemo } from 'react';
 import L from 'leaflet';
 import { useAppDispatch } from '../../store';
 import { mapOverlayCreated } from '../../store/painter';
-import { Campaign } from '../../types/Campaign';
+import { Campaign } from '../../data/campaigns';
 
 type MapLayerLookup = { [key: string]: L.Layer };
 
