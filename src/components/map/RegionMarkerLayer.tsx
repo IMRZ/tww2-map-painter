@@ -22,6 +22,10 @@ const useStyles = makeStyles({
     height: 24,
     width: 24,
     flexShrink: 0,
+    filter: 'drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6))',
+    '&:hover': {
+      filter: 'drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4))',
+    }
   },
   '@keyframes arrowBounce': {
     '0%': {

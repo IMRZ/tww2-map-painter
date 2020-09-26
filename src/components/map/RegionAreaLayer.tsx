@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import clsx from 'clsx';
 import L from 'leaflet';
+import { makeStyles } from '@material-ui/core/styles';
 import { useMapContext, createSvgElement } from './map';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { regionChanged, regionOwnerChanged } from '../../store/painter';
 import { Region } from '../../data/campaigns';
+
+const useStyles = makeStyles({
+  path: {
+    fillOpacity: 0.4,
+    stroke: 'rgba(0, 0, 0, 0.4)',
+    strokeWidth: 1,
+    '&:hover': {
+      fillOpacity: 0.6,
+      stroke: 'rgba(0, 0, 0, 0.6)',
+    }
+  }
+});
 
 const RegionAreaLayer = () => {
   const [svgElem, setSvgElem] = useState<SVGSVGElement | null>(null);
@@ -30,12 +44,13 @@ const RegionAreaLayer = () => {
 };
 
 const RegionPath = (props: { region: Region }) => {
+  const classes = useStyles();
   const { region } = props;
   const { fillColor, onClickRegion } = useRegionPath(region);
-  const pathStyle = { fill: fillColor, fillOpacity: 0.4, stroke: 'black', strokeWidth: 1 };
+  const fillStyle = { fill: fillColor };
 
   return (
-    <path className="leaflet-interactive" onClick={onClickRegion} d={region.d} style={pathStyle} />
+    <path className={clsx('leaflet-interactive', classes.path)} onClick={onClickRegion} d={region.d} style={fillStyle} />
   );
 };
 
