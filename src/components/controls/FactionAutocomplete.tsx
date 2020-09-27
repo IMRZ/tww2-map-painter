@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, InputAdornment } from '@material-ui/core';
+import { TextField, InputAdornment, Typography } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
 import assets from '../../assets';
@@ -58,8 +58,8 @@ const FactionAutocomplete = ({
 const FactionAutocompleteItem = (props: any) => {
   return (
     <>
-      <img src={props.option.icon} alt="" />
-      {props.option.name}
+      <img style={{ width: 24, height: 24, marginRight: 12 }} src={props.option.icon} alt="" />
+      <Typography noWrap>{props.option.name}</Typography>
     </>
   )
 };
@@ -69,9 +69,9 @@ const FactionAutocompleteInput = (props: any) => {
     ? props.value?.icon ?? abandonedIcon
     : null;
 
-  const inputAdornment = (
+  const inputAdornment = icon && (
     <InputAdornment position="start">
-      <img src={icon} alt="" />
+      <img style={{ width: 24, height: 24 }} src={icon} alt="" />
     </InputAdornment>
   );
 
