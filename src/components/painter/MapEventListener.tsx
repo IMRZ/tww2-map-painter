@@ -1,13 +1,14 @@
 import React from 'react';
 import { useAppSelector } from '../../store';
-import { useMapContext } from './map';
+import { useMapContext } from '../map/context';
+import { Campaign } from '../../data/campaigns';
 
 const MapEventListener = () => {
-  const context = useMapContext();
+  const context = useMapContext<Campaign>();
 
   const selectedRegion = useAppSelector((state) => state.painter.selectedRegion);
   const isFlyToEnabled = useAppSelector((state) => state.painter.config.flyToEnabled);
-  const painterOverlays = useAppSelector((state) => state.painter.overlays);
+  const painterOverlays = useAppSelector((state) => state.map.overlays);
 
   React.useEffect(() => {
     const { map, campaign, bounds } = context;

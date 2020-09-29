@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
-import { useAppSelector, useAppDispatch } from '../../store';
-import { mapChanged } from '../../store/painter';
-import campaigns from '../../data/campaigns';
+import { useAppSelector, useAppDispatch } from '../../../store';
+import { mapChanged } from '../../../store/painter';
+import campaigns from '../../../data/campaigns';
 
 const CampaignSelect = () => {
   const dispatch = useAppDispatch();

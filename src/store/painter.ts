@@ -36,12 +36,6 @@ export const PainterMode = {
 } as const;
 export type PainterModeKey = typeof PainterMode[keyof typeof PainterMode];
 
-type MapOverlay = {
-  key: string;
-  label: string;
-  visible: boolean;
-};
-
 const INITIAL_STATE = {
   campaign: DEFAULT_CAMPAIGN,
   factions: DEFAULT_ALL_FACTION_COMBINED,
@@ -56,8 +50,6 @@ const INITIAL_STATE = {
   selectedFaction: null as string | null,
 
   presets: DEFAULT_PRESETS,
-
-  overlays: {} as Record<any, MapOverlay>,
 
   config: {
     flyToEnabled: true,
@@ -95,15 +87,6 @@ const painterSlice = createSlice({
     regionOwnerChanged: (state, action) => {
       const [regionKey, factionKey] = action.payload;
       state.ownership[regionKey] = factionKey;
-    },
-
-    mapOverlayCreated: (state, action) => {
-      const overlay = action.payload as MapOverlay;
-      state.overlays[overlay.key] = overlay;
-    },
-    mapOverlayChanged: (state, action) => {
-      const [overlayKey, visible] = action.payload;
-      state.overlays[overlayKey].visible = visible;
     },
 
     updateConfiguration: (state, action) => {
@@ -146,8 +129,6 @@ export const {
   regionChanged,
   regionOwnerChanged,
   updateConfiguration,
-  mapOverlayCreated,
-  mapOverlayChanged,
   importMap
 } = painterSlice.actions;
 

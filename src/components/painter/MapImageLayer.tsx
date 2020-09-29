@@ -1,6 +1,6 @@
 import React from 'react';
 import L from 'leaflet';
-import { useMapContext } from './map';
+import { useMapContext } from '../map/context';
 
 const MapImageLayer = () => {
   const context = useMapContext();

@@ -2,8 +2,8 @@ import React from 'react';
 import { IconButton, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Close } from '@material-ui/icons';
-import CampaignSelect from './controls/CampaignSelect';
-import PainterPane from './controls/PainterPane';
+import CampaignSelect from './painter/ControlPane/CampaignSelect';
+import ControlPane from './painter/ControlPane';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,7 +64,7 @@ const DrawerContent = (props: DrawerContentProps) => {
       </div>
       <Divider />
       <div className={classes.scroller}>
-        <PainterPane />
+        <ControlPane />
       </div>
     </div>
   );

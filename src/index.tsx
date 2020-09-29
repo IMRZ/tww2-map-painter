@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
-import appTheme from './components/app-theme';
+import theme from './config/theme';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -13,7 +13,7 @@ import App from './App';
 import 'leaflet/dist/leaflet.css';
 
 ReactDOM.render(
-  <ThemeProvider theme={appTheme}>
+  <ThemeProvider theme={theme}>
     <CssBaseline />
     <Provider store={store}>
       <App />

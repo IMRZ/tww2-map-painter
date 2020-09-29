@@ -3,12 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useAppSelector } from '../store';
 import Preloader from './Preloader';
 import Map from './map/Map';
-import MapImageLayer from './map/MapImageLayer';
-import MapImageTextLayer from './map/MapImageTextLayer';
-import RegionMarkerLayer from './map/RegionMarkerLayer';
-import RegionAreaLayer from './map/RegionAreaLayer';
-import MapEventListener from './map/MapEventListener';
-import MapCenterButton from './map/MapCenterButton';
+import MapImageLayer from './painter/MapImageLayer';
+import MapImageTextLayer from './painter/MapImageTextLayer';
+import RegionMarkerLayer from './painter/RegionMarkerLayer';
+import RegionAreaLayer from './painter/RegionAreaLayer';
+import MapEventListener from './painter/MapEventListener';
+import MapCenterButton from './painter/MapCenterButton';
 
 const useStyles = makeStyles(() => ({
   map: {

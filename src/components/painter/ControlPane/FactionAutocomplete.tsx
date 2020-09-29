@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField, InputAdornment, Typography } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
-import assets from '../../assets';
+import assets from '../../../assets';
 const abandonedIcon = assets['icons/abandoned'];
 
 type FactionAutocompleteProps = {

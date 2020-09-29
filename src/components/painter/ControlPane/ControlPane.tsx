@@ -16,9 +16,10 @@ import { Autocomplete } from '@material-ui/lab';
 import { Layers } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { useAppDispatch, useAppSelector } from '../../../store';
-import FactionAutocomplete from '../FactionAutocomplete';
+import FactionAutocomplete from './FactionAutocomplete';
 
-import { importMap, mapOverlayChanged } from '../../../store/painter';
+import { importMap } from '../../../store/painter';
+import { overlayChanged } from '../../map/reducer';
 import { usePainter } from './painter';
 
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PainterPane = () => {
+const ControlPane = () => {
   const classes = useStyles();
 
   const painter = usePainter();
@@ -206,11 +207,11 @@ const PainterSectionPresets = () => {
 };
 
 const PainterSectionOverlays = () => {
-  const overlays = useAppSelector((state) => state.painter.overlays);
+  const overlays = useAppSelector((state) => state.map.overlays);
 
   const dispatch = useAppDispatch();
   const setOverlayVisible = (overlayKey: string, visible: boolean) => {
-    dispatch(mapOverlayChanged([overlayKey, visible]));
+    dispatch(overlayChanged([overlayKey, visible]));
   };
 
   return (
@@ -235,4 +236,4 @@ const PainterSectionOverlays = () => {
   );
 };
 
-export default PainterPane;
+export default ControlPane;

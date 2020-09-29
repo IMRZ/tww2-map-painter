@@ -1,6 +1,6 @@
 import React from 'react';
 import L from 'leaflet';
-import { useMapContext } from './map';
+import { useMapContext } from '../map/context';
 
 const MapImageTextLayer = () => {
   const context = useMapContext();
@@ -18,7 +18,7 @@ const MapImageTextLayer = () => {
     });
     waitFor.push(onLoad);
     map.addLayer(layer);
-    context.addOverlay('map-text', 'Map text', layer);
+    context.addOverlay('map-text', 'Map labels', layer);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return null;

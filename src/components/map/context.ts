@@ -1,8 +1,7 @@
 import { createContext, useContext, useMemo } from 'react';
+import { useDispatch } from 'react-redux';
 import L from 'leaflet';
-import { useAppDispatch } from '../../store';
-import { mapOverlayCreated } from '../../store/painter';
-import { Campaign } from '../../data/campaigns';
+import { overlayCreated } from './reducer';
 
 type MapLayerLookup = { [key: string]: L.Layer };
 
@@ -11,14 +10,25 @@ type MapContextState = React.MutableRefObject<{
   layers: MapLayerLookup;
   waitFor: Promise<void>[];
   bounds: L.LatLngBoundsLiteral;
-  campaign: Campaign;
+  campaign: BaseCampaign;
 }>;
+
+export type BaseCampaign = {
+  key: string;
+  name: string;
+  map: {
+    image: string;
+    imageText: string;
+    width: number;
+    height: number;
+  };
+};
 
 export const MapContext = createContext<MapContextState | null>(null);
 
-export function useMapContext() {
+export function useMapContext<C extends BaseCampaign = BaseCampaign>() {
   const context = useContext(MapContext);
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
 
   const state = useMemo(() => {
     return {
@@ -34,16 +44,12 @@ export function useMapContext() {
       get bounds(): L.LatLngBoundsLiteral {
         return context?.current.bounds!;
       },
-      get campaign(): Campaign {
-        return context?.current.campaign!;
+      get campaign(): C {
+        return context?.current.campaign! as C;
       },
       addOverlay: (key: string, label: string, layer: L.Layer) => {
         context!.current.layers[key] = layer;
-        dispatch(mapOverlayCreated({
-          key: key,
-          label: label,
-          visible: true,
-        }));
+        dispatch(overlayCreated([key, label]));
       },
     };
   }, [context, dispatch]);

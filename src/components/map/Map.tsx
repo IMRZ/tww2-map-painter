@@ -1,29 +1,20 @@
 import React, { useCallback } from 'react';
 import L from 'leaflet';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { MapContext } from './map';
-import { Campaign } from '../../data/campaigns';
+import { MapContext, BaseCampaign } from './context';
 
-const useStyles = makeStyles(() => ({
-  root: {
-    height: '100%',
-    transition: 'opacity 1s',
-    opacity: 0,
-  },
-  loaded: {
-    opacity: 1,
-  },
-}));
-
-type MapProps = {
-  children: React.ReactNode;
-  campaign: Campaign;
+const style = {
+  height: '100%',
+  transition: 'opacity 1s',
+  opacity: 0,
 };
 
-const Map = (props: MapProps) => {
+type MapProps<C extends BaseCampaign> = {
+  children: React.ReactNode;
+  campaign: C;
+};
+
+const Map = <C extends BaseCampaign>(props: MapProps<C>) => {
   const { children, campaign } = props;
-  const classes = useStyles();
 
   const bounds = [
     [0, 0],
@@ -76,7 +67,7 @@ const Map = (props: MapProps) => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className={clsx(classes.root, { [classes.loaded]: loaded })}>
+    <div style={{ ...style, opacity: loaded ? 1 : 0 }}>
       <div ref={mapContainer} style={{ height: '100%', backgroundColor: 'transparent' }}>
         <MapContext.Provider value={contextState}>{children}</MapContext.Provider>
       </div>

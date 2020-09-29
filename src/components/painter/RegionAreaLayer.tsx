@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import clsx from 'clsx';
 import L from 'leaflet';
 import { makeStyles } from '@material-ui/core/styles';
-import { useMapContext, createSvgElement } from './map';
+import { useMapContext, createSvgElement } from '../map/context';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { regionChanged, regionOwnerChanged } from '../../store/painter';
-import { Region } from '../../data/campaigns';
+import { Campaign, Region } from '../../data/campaigns';
 
 const useStyles = makeStyles({
   path: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 
 const RegionAreaLayer = () => {
   const [svgElem, setSvgElem] = useState<SVGSVGElement | null>(null);
-  const context = useMapContext();
+  const context = useMapContext<Campaign>();
 
   React.useEffect(() => {
     const { map, bounds, campaign } = context;
@@ -30,7 +30,7 @@ const RegionAreaLayer = () => {
     const svgElement = createSvgElement(campaign.map.width, campaign.map.height);
     const layer = L.svgOverlay(svgElement, bounds);
     map.addLayer(layer);
-    context.addOverlay('region-paths', 'Region paths', layer);
+    context.addOverlay('region-paths', 'Region owner areas', layer);
     setSvgElem(svgElement);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 

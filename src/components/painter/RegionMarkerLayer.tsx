@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import L from 'leaflet';
 import { makeStyles } from '@material-ui/core/styles';
-import { useMapContext } from './map';
+import { useMapContext } from '../map/context';
 import { useAppSelector, useAppDispatch } from '../../store';
 import { regionChanged, regionOwnerChanged } from '../../store/painter';
-import { Region } from '../../data/campaigns';
+import type { Campaign } from '../../data/campaigns';
 
 import assets from '../../assets';
 const abandonedIcon = assets['icons/abandoned'];
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
 
 // TODO: cleanup #useEffect....
 const RegionMarkerLayer = () => {
-  const context = useMapContext();
+  const context = useMapContext<Campaign>();
   const [elems, setElems] = React.useState<[HTMLElement, any][]>([]);
 
   React.useEffect(() => {
@@ -65,7 +65,7 @@ const RegionMarkerLayer = () => {
 
     const layer = L.layerGroup(markers);
     map.addLayer(layer);
-    context.addOverlay('region-markers', 'Region markers', layer);
+    context.addOverlay('region-markers', 'Region owner markers', layer);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
