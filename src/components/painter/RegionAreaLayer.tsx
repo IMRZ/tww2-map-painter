@@ -10,12 +10,9 @@ import { Campaign, Region } from '../../data/campaigns';
 
 const useStyles = makeStyles({
   path: {
-    fillOpacity: 0.4,
-    stroke: 'rgba(0, 0, 0, 0.4)',
-    strokeWidth: 1,
+    opacity: 0.4,
     '&:hover': {
-      fillOpacity: 0.6,
-      stroke: 'rgba(0, 0, 0, 0.6)',
+      opacity: 0.6,
     }
   }
 });
@@ -47,10 +44,9 @@ const RegionPath = (props: { region: Region }) => {
   const classes = useStyles();
   const { region } = props;
   const { fillColor, onClickRegion } = useRegionPath(region);
-  const fillStyle = { fill: fillColor };
 
   return (
-    <path className={clsx('leaflet-interactive', classes.path)} onClick={onClickRegion} d={region.d} style={fillStyle} />
+    <path className={clsx('leaflet-interactive', classes.path)} onClick={onClickRegion} d={region.d} fill={fillColor} />
   );
 };
 

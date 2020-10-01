@@ -19,12 +19,12 @@ const MapEventListener = () => {
         const region = campaign.regions[selectedRegion];
         map.flyTo([region.settlement.y, region.settlement.x], 1, {
           animate: true,
-          duration: 3
+          duration: 2
         });
       } else {
         map.flyToBounds(bounds, {
           animate: true,
-          duration: 3
+          duration: 2
         });
       }
     }
