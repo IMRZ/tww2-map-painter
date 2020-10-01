@@ -30,15 +30,29 @@ const factionGroups = requireContext.keys().reduce((accumulator, filename) => {
     const factionName = meta['name'];
     const factionColor = meta['color'];
 
-    accumulator[groupKey].factions[factionKey] = {
-      key: factionKey,
-      name: factionName,
-      icon: requireContext(filename.replace('meta.json', 'mon_24.png')),
-      color: factionColor,
-    };
+    // rekt... some factions have the same key...
+    if (accumulator[groupKey].factions[factionKey] === undefined) {
+      accumulator[groupKey].factions[factionKey] = {
+        key: factionKey,
+        name: factionName,
+        icon: requireContext(filename.replace('meta.json', 'mon_24.png')),
+        color: factionColor,
+        group: groupKey,
+        rank: 1,
+      };
+    }
   }
 
   return accumulator;
 }, {});
 
-export default factionGroups;
+export interface Faction {
+  readonly key: string;
+  readonly name: string;
+  readonly icon: string;
+  readonly color: string;
+  readonly group: string;
+  readonly rank: number;
+}
+
+export default factionGroups as { [key: string]: Faction };

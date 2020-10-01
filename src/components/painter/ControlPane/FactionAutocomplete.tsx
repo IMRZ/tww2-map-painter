@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
-import { TextField, InputAdornment } from '@material-ui/core';
+import React from 'react';
+import { TextField, InputAdornment, Typography } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
-import assets from '../../assets';
-
+import assets from '../../../assets';
 const abandonedIcon = assets['icons/abandoned'];
 
 type FactionAutocompleteProps = {
@@ -15,9 +14,10 @@ type FactionAutocompleteProps = {
   placeholder?: string;
   helperText?: string;
   onChange: (event: React.ChangeEvent<{}>, value: any) => void;
+  getOptionSelected?: (option: any, value: any) => boolean;
 };
 
-const FactionAutocomplete: FC<FactionAutocompleteProps> = ({
+const FactionAutocomplete = ({
   options = [],
   value = null,
   disabled = false,
@@ -26,12 +26,14 @@ const FactionAutocomplete: FC<FactionAutocompleteProps> = ({
   placeholder,
   helperText,
   onChange,
-}) => {
+  getOptionSelected,
+}: FactionAutocompleteProps) => {
   return (
     <Autocomplete
       size="small"
       options={options}
       value={value}
+      getOptionSelected={getOptionSelected}
       onChange={onChange}
       groupBy={(option) => option.group}
       getOptionLabel={(option) => option.name}
@@ -56,8 +58,8 @@ const FactionAutocomplete: FC<FactionAutocompleteProps> = ({
 const FactionAutocompleteItem = (props: any) => {
   return (
     <>
-      <img src={props.option.icon} alt="" />
-      {props.option.name}
+      <img style={{ width: 24, height: 24, marginRight: 12 }} src={props.option.icon} alt="" />
+      <Typography noWrap>{props.option.name}</Typography>
     </>
   )
 };
@@ -67,9 +69,9 @@ const FactionAutocompleteInput = (props: any) => {
     ? props.value?.icon ?? abandonedIcon
     : null;
 
-  const inputAdornment = (
+  const inputAdornment = icon && (
     <InputAdornment position="start">
-      <img src={icon} alt="" />
+      <img style={{ width: 24, height: 24 }} src={icon} alt="" />
     </InputAdornment>
   );
 

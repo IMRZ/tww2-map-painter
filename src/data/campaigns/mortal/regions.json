@@ -135,9 +135,7 @@
       "y": 559,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_tmb"
-      ],
+      "strategicLocations": ["res_location_tmb"],
       "strategicResources": []
     }
   },
@@ -157,9 +155,7 @@
       "y": 568,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_tmb"
-      ],
+      "strategicLocations": ["res_location_tmb"],
       "strategicResources": []
     }
   },
@@ -180,9 +176,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_atalan_mountains_eye_of_the_panther": {
@@ -202,9 +196,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicResources": ["res_gems"]
     }
   },
   "wh2_main_atalan_mountains_martek": {
@@ -224,9 +216,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_atalan_mountains_vulture_mountain": {
@@ -285,12 +275,8 @@
       "y": 1629,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_avelorn_tor_saroir": {
@@ -310,9 +296,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_blackspine_mountains_plain_of_dogs": {
@@ -352,9 +336,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh2_main_blackspine_mountains_red_desert": {
@@ -374,9 +356,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh2_main_caledor_tor_sethai": {
@@ -396,9 +376,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_caledor_vauls_anvil": {
@@ -417,12 +395,8 @@
       "y": 1262,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicLocations": ["res_location_hef_def"],
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_charnel_valley_granite_massif": {
@@ -461,12 +435,8 @@
       "y": 605,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_skv"
-      ],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicLocations": ["res_location_skv"],
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh2_main_chrace_elisia": {
@@ -486,9 +456,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_chrace_tor_achare": {
@@ -507,12 +475,8 @@
       "y": 1899,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef"
-      ],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicLocations": ["res_location_hef"],
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh2_main_coast_of_araby_al_haikk": {
@@ -532,9 +496,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh2_main_coast_of_araby_copher": {
@@ -554,9 +516,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_spices"
-      ]
+      "strategicResources": ["res_spices"]
     }
   },
   "wh2_main_coast_of_araby_fyrus": {
@@ -575,9 +535,7 @@
       "y": 740,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_brt"
-      ],
+      "strategicLocations": ["res_location_brt"],
       "strategicResources": []
     }
   },
@@ -617,12 +575,8 @@
       "y": 1853,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef"
-      ],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicLocations": ["res_location_hef"],
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh2_main_crater_of_the_walking_dead_doom_glade": {
@@ -642,9 +596,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_crater_of_the_walking_dead_rasetra": {
@@ -684,9 +636,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh2_main_deadwood_nagrar": {
@@ -706,9 +656,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_deadwood_shagrath": {
@@ -767,12 +715,8 @@
       "y": 810,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_gems"]
     }
   },
   "wh2_main_devils_backbone_lybaras": {
@@ -792,9 +736,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_spices"
-      ]
+      "strategicResources": ["res_spices"]
     }
   },
   "wh2_main_devils_backbone_mahrak": {
@@ -814,9 +756,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_doom_glades_hag_hall": {
@@ -836,9 +776,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh2_main_doom_glades_ice_rock_gorge": {
@@ -897,9 +835,7 @@
       "y": 2235,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
+      "strategicLocations": ["res_location_hef_def"],
       "strategicResources": []
     }
   },
@@ -960,9 +896,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh2_main_eagle_gate": {
@@ -1002,9 +936,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh2_main_eataine_lothern": {
@@ -1023,9 +955,7 @@
       "y": 1266,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -1045,9 +975,7 @@
       "y": 1429,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
+      "strategicLocations": ["res_location_hef_def"],
       "strategicResources": []
     }
   },
@@ -1088,9 +1016,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh2_main_ellyrion_whitefire_tor": {
@@ -1110,9 +1036,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicResources": ["res_gems"]
     }
   },
   "wh2_main_fort_bergbres": {
@@ -1191,9 +1115,7 @@
       "y": 1401,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_skv"
-      ],
+      "strategicLocations": ["res_location_skv"],
       "strategicResources": []
     }
   },
@@ -1214,9 +1136,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_gnoblar_country_pigbarter": {
@@ -1235,9 +1155,7 @@
       "y": 1206,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_grn"
-      ],
+      "strategicLocations": ["res_location_emp_grn"],
       "strategicResources": []
     }
   },
@@ -1278,9 +1196,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_great_desert_of_araby_black_tower_of_arkhan": {
@@ -1299,9 +1215,7 @@
       "y": 242,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_tmb"
-      ],
+      "strategicLocations": ["res_location_tmb"],
       "strategicResources": []
     }
   },
@@ -1322,9 +1236,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh2_main_great_desert_of_araby_pools_of_despair": {
@@ -1363,9 +1275,7 @@
       "y": 363,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -1406,9 +1316,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_headhunters_jungle_mangrove_coast": {
@@ -1428,9 +1336,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_medicine"
-      ]
+      "strategicResources": ["res_medicine"]
     }
   },
   "wh2_main_headhunters_jungle_marks_of_the_old_ones": {
@@ -1469,12 +1375,8 @@
       "y": 70,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_skv_lzd"
-      ],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicLocations": ["res_location_skv_lzd"],
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_heart_of_the_jungle_oreons_camp": {
@@ -1513,12 +1415,8 @@
       "y": 2877,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_skv"
-      ],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicLocations": ["res_location_skv"],
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_huahuan_desert_chamber_of_visions": {
@@ -1537,12 +1435,8 @@
       "y": 251,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_medicine"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_medicine"]
     }
   },
   "wh2_main_huahuan_desert_sentinels_of_xeti": {
@@ -1601,9 +1495,7 @@
       "y": 3035,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_def"
-      ],
+      "strategicLocations": ["res_location_def"],
       "strategicResources": []
     }
   },
@@ -1643,12 +1535,8 @@
       "y": 2900,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicLocations": ["res_location_hef_def"],
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_iron_mountains_rackdo_gorge": {
@@ -1727,12 +1615,8 @@
       "y": 1490,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_lzd"
-      ],
-      "strategicResources": [
-        "res_spices"
-      ]
+      "strategicLocations": ["res_location_lzd"],
+      "strategicResources": ["res_spices"]
     }
   },
   "wh2_main_isthmus_of_lustria_hexoatl": {
@@ -1751,12 +1635,8 @@
       "y": 1397,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_isthmus_of_lustria_skeggi": {
@@ -1775,9 +1655,7 @@
       "y": 1513,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_nor"
-      ],
+      "strategicLocations": ["res_location_nor"],
       "strategicResources": []
     }
   },
@@ -1797,9 +1675,7 @@
       "y": 1513,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -1840,9 +1716,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicResources": ["res_gems"]
     }
   },
   "wh2_main_jungles_of_green_mists_wellsprings_of_eternity": {
@@ -1862,9 +1736,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh2_main_kingdom_of_beasts_serpent_coast": {
@@ -1904,9 +1776,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh2_main_kingdom_of_beasts_the_cursed_jungle": {
@@ -1926,9 +1796,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_medicine"
-      ]
+      "strategicResources": ["res_medicine"]
     }
   },
   "wh2_main_land_of_assassins_lashiek": {
@@ -1948,9 +1816,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh2_main_land_of_assassins_palace_of_the_wizard_caliph": {
@@ -2009,12 +1875,8 @@
       "y": 545,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_land_of_the_dead_zandri": {
@@ -2033,12 +1895,8 @@
       "y": 675,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_tmb"
-      ],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicLocations": ["res_location_tmb"],
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh2_main_land_of_the_dervishes_plain_of_tuskers": {
@@ -2097,9 +1955,7 @@
       "y": 2519,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_xef_emp_brt"
-      ],
+      "strategicLocations": ["res_location_xef_emp_brt"],
       "strategicResources": []
     }
   },
@@ -2139,9 +1995,7 @@
       "y": 1015,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_vmp_arkhan"
-      ],
+      "strategicLocations": ["res_location_vmp_arkhan"],
       "strategicResources": []
     }
   },
@@ -2201,9 +2055,7 @@
       "y": 2090,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -2223,12 +2075,8 @@
       "y": 2016,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicLocations": ["res_location_hef_def"],
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_nagarythe_tor_dranil": {
@@ -2268,9 +2116,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_northern_great_jungle_temple_of_tlencan": {
@@ -2310,9 +2156,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_medicine"
-      ]
+      "strategicResources": ["res_medicine"]
     }
   },
   "wh2_main_northern_great_jungle_xlanhuapec": {
@@ -2331,12 +2175,8 @@
       "y": 475,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_lzd"
-      ],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicLocations": ["res_location_lzd"],
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_northern_jungle_of_pahualaxa_macu_peaks": {
@@ -2356,9 +2196,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_northern_jungle_of_pahualaxa_port_reaver": {
@@ -2397,12 +2235,8 @@
       "y": 1141,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_lzd"
-      ],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicLocations": ["res_location_lzd"],
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh2_main_northern_jungle_of_pahualaxa_swamp_town": {
@@ -2422,9 +2256,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh2_main_northern_worlds_edge_mountains_karak_raziak": {
@@ -2483,12 +2315,8 @@
       "y": 2500,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_obsidian_peaks_storag_kor": {
@@ -2528,9 +2356,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh2_main_phoenix_gate": {
@@ -2590,9 +2416,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_saphery_tower_of_hoeth": {
@@ -2611,9 +2435,7 @@
       "y": 1550,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -2633,12 +2455,8 @@
       "y": 931,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh2_main_shifting_sands_antoch": {
@@ -2677,12 +2495,8 @@
       "y": 219,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_tmb"
-      ],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicLocations": ["res_location_tmb"],
+      "strategicResources": ["res_gems"]
     }
   },
   "wh2_main_shifting_sands_ka-sabar": {
@@ -2701,12 +2515,8 @@
       "y": 242,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh2_main_skavenblight_skavenblight": {
@@ -2725,9 +2535,7 @@
       "y": 1266,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_skv"
-      ],
+      "strategicLocations": ["res_location_skv"],
       "strategicResources": []
     }
   },
@@ -2747,9 +2555,7 @@
       "y": 1774,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp"
-      ],
+      "strategicLocations": ["res_location_emp"],
       "strategicResources": []
     }
   },
@@ -2789,12 +2595,8 @@
       "y": 298,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_lzd"
-      ],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicLocations": ["res_location_lzd"],
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_southern_great_jungle_itza": {
@@ -2813,12 +2615,8 @@
       "y": 247,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_southern_great_jungle_subatuun": {
@@ -2838,9 +2636,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh2_main_southern_jungle_of_pahualaxa_floating_pyramid": {
@@ -2860,9 +2656,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_savage"
-      ]
+      "strategicResources": ["res_savage"]
     }
   },
   "wh2_main_southern_jungle_of_pahualaxa_monument_of_the_moon": {
@@ -2902,9 +2696,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_medicine"
-      ]
+      "strategicResources": ["res_medicine"]
     }
   },
   "wh2_main_southern_jungle_of_pahualaxa_the_high_sentinel": {
@@ -2924,9 +2716,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_southlands_jungle_golden_tower_of_the_gods": {
@@ -2945,9 +2735,7 @@
       "y": 168,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -2987,12 +2775,8 @@
       "y": 88,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_dwf"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_southlands_worlds_edge_mountains_lost_plateau": {
@@ -3031,12 +2815,8 @@
       "y": 461,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_grn"
-      ],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicLocations": ["res_location_grn"],
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_spine_of_sotek_hualotal": {
@@ -3076,9 +2856,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_spine_of_sotek_monument_of_izzatal": {
@@ -3117,9 +2895,7 @@
       "y": 1755,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_colony"
-      ],
+      "strategicLocations": ["res_location_colony"],
       "strategicResources": []
     }
   },
@@ -3160,9 +2936,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_the_black_flood_hag_graef": {
@@ -3181,9 +2955,7 @@
       "y": 2793,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -3263,9 +3035,7 @@
       "y": 2831,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_def"
-      ],
+      "strategicLocations": ["res_location_def"],
       "strategicResources": []
     }
   },
@@ -3325,9 +3095,7 @@
       "y": 1001,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -3348,9 +3116,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh2_main_the_chill_road_ghrond": {
@@ -3369,12 +3135,8 @@
       "y": 3040,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_the_chill_road_the_great_arena": {
@@ -3414,9 +3176,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_the_clawed_coast_the_monoliths": {
@@ -3436,9 +3196,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_the_clawed_coast_the_twisted_glade": {
@@ -3498,9 +3256,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_the_creeping_jungle_tlaxtlan": {
@@ -3519,9 +3275,7 @@
       "y": 680,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_lzd"
-      ],
+      "strategicLocations": ["res_location_lzd"],
       "strategicResources": []
     }
   },
@@ -3541,9 +3295,7 @@
       "y": 959,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -3583,9 +3335,7 @@
       "y": 1257,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_vmp_dwf_hef"
-      ],
+      "strategicLocations": ["res_location_vmp_dwf_hef"],
       "strategicResources": []
     }
   },
@@ -3605,9 +3355,7 @@
       "y": 1099,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -3627,9 +3375,7 @@
       "y": 2928,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
+      "strategicLocations": ["res_location_hef_def"],
       "strategicResources": []
     }
   },
@@ -3670,9 +3416,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh2_main_the_road_of_skulls_the_black_pillar": {
@@ -3711,9 +3455,7 @@
       "y": 1462,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_skv"
-      ],
+      "strategicLocations": ["res_location_skv"],
       "strategicResources": []
     }
   },
@@ -3754,9 +3496,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_tiranoc_tor_anroc": {
@@ -3775,12 +3515,8 @@
       "y": 1592,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_hef_def"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh2_main_tiranoc_whitepeak": {
@@ -3800,9 +3536,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_titan_peaks_ancient_city_of_quintex": {
@@ -3821,12 +3555,8 @@
       "y": 1876,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh2_main_titan_peaks_ironspike": {
@@ -3846,9 +3576,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh2_main_titan_peaks_ssildra_tor": {
@@ -3868,9 +3596,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh2_main_titan_peaks_the_moon_shard": {
@@ -3890,9 +3616,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh2_main_unicorn_gate": {
@@ -3932,9 +3656,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh2_main_vampire_coast_the_awakening": {
@@ -3953,9 +3675,7 @@
       "y": 605,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -3976,9 +3696,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh2_main_volcanic_islands_fuming_serpent": {
@@ -3998,9 +3716,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_animals"
-      ]
+      "strategicResources": ["res_animals"]
     }
   },
   "wh2_main_volcanic_islands_the_star_tower": {
@@ -4019,12 +3735,8 @@
       "y": 340,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_colony"
-      ],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicLocations": ["res_location_colony"],
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh2_main_western_jungles_cuexotl": {
@@ -4064,9 +3776,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh2_main_yvresse_elessaeli": {
@@ -4086,9 +3796,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh2_main_yvresse_shrine_of_loec": {
@@ -4127,12 +3835,8 @@
       "y": 1615,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_def"
-      ],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicLocations": ["res_location_hef_def"],
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh2_main_yvresse_tralinia": {
@@ -4172,9 +3876,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_athel_loren_vauls_anvil": {
@@ -4194,9 +3896,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_athel_loren_waterfall_palace": {
@@ -4276,9 +3976,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh_main_bastonne_et_montfort_castle_bastonne": {
@@ -4318,9 +4016,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_black_mountains_karak_angazhar": {
@@ -4340,9 +4036,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_black_mountains_karak_hirn": {
@@ -4362,9 +4056,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_black_mountains_mighdal_vongalbarak": {
@@ -4424,9 +4116,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicResources": ["res_gems"]
     }
   },
   "wh_main_blightwater_kradtommen": {
@@ -4466,9 +4156,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_blood_river_valley_barag_dawazbag": {
@@ -4508,9 +4196,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh_main_blood_river_valley_dok_karaz": {
@@ -4530,9 +4216,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh_main_blood_river_valley_varenka_hills": {
@@ -4552,9 +4236,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_bordeleaux_et_aquitaine_aquitaine": {
@@ -4593,12 +4275,8 @@
       "y": 1816,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_vmp_brt"
-      ],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicLocations": ["res_location_emp_vmp_brt"],
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh_main_carcassone_et_brionne_brionne": {
@@ -4618,9 +4296,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh_main_carcassone_et_brionne_castle_carcassonne": {
@@ -4639,12 +4315,8 @@
       "y": 1462,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_brt"
-      ],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicLocations": ["res_location_brt"],
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh_main_couronne_et_languille_couronne": {
@@ -4663,12 +4335,8 @@
       "y": 2258,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_brt"
-      ],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicLocations": ["res_location_emp_brt"],
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh_main_couronne_et_languille_languille": {
@@ -4707,12 +4375,8 @@
       "y": 1401,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf_skv"
-      ],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicLocations": ["res_location_dwf_skv"],
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_death_pass_karag_dron": {
@@ -4732,9 +4396,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_death_pass_karak_drazh": {
@@ -4753,12 +4415,8 @@
       "y": 1369,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_grn"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_grn"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh_main_desolation_of_nagash_black_iron_mine": {
@@ -4778,9 +4436,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_desolation_of_nagash_karak_azul": {
@@ -4800,9 +4456,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh_main_desolation_of_nagash_spitepeak": {
@@ -4862,9 +4516,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_eastern_badlands_karak_eight_peaks": {
@@ -4883,12 +4535,8 @@
       "y": 1257,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf_grn_skv"
-      ],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicLocations": ["res_location_dwf_grn_skv"],
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_eastern_badlands_valayas_sorrow": {
@@ -4928,9 +4576,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_eastern_border_princes_matorca": {
@@ -4950,9 +4596,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh_main_eastern_oblast_praag": {
@@ -4992,9 +4636,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_eastern_sylvania_castle_drakenhof": {
@@ -5013,12 +4655,8 @@
       "y": 1965,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_vmp"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_vmp"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh_main_eastern_sylvania_eschen": {
@@ -5038,9 +4676,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh_main_eastern_sylvania_waldenhof": {
@@ -5080,9 +4716,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh_main_estalia_magritta": {
@@ -5101,12 +4735,8 @@
       "y": 1108,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_brt"
-      ],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicLocations": ["res_location_emp_brt"],
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_estalia_tobaro": {
@@ -5146,9 +4776,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_forest_of_arden_gisoreux": {
@@ -5168,9 +4796,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_gianthome_mountains_khazid_bordkarag": {
@@ -5209,12 +4835,8 @@
       "y": 3035,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf"
-      ],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicLocations": ["res_location_dwf"],
+      "strategicResources": ["res_gems"]
     }
   },
   "wh_main_gianthome_mountains_sjoktraken": {
@@ -5254,9 +4876,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_goromandy_mountains_frozen_landing": {
@@ -5336,9 +4956,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh_main_hochland_brass_keep": {
@@ -5358,9 +4976,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh_main_hochland_hergig": {
@@ -5380,9 +4996,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_ice_tooth_mountains_doomkeep": {
@@ -5462,9 +5076,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_lyonesse_mousillon": {
@@ -5483,9 +5095,7 @@
       "y": 1927,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_vmp"
-      ],
+      "strategicLocations": ["res_location_vmp"],
       "strategicResources": []
     }
   },
@@ -5505,9 +5115,7 @@
       "y": 1755,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_grn"
-      ],
+      "strategicLocations": ["res_location_grn"],
       "strategicResources": []
     }
   },
@@ -5527,12 +5135,8 @@
       "y": 2169,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp"
-      ],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicLocations": ["res_location_emp"],
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_middenland_middenheim": {
@@ -5551,9 +5155,7 @@
       "y": 2481,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_brt"
-      ],
+      "strategicLocations": ["res_location_emp_brt"],
       "strategicResources": []
     }
   },
@@ -5594,9 +5196,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_mountains_of_hel_aeslings_conclave": {
@@ -5636,9 +5236,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_obsidian"
-      ]
+      "strategicResources": ["res_obsidian"]
     }
   },
   "wh_main_mountains_of_hel_winter_pyre": {
@@ -5678,9 +5276,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_mountains_of_naglfari_varg_camp": {
@@ -5720,9 +5316,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_nordland_salzenmund": {
@@ -5742,9 +5336,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_northern_grey_mountains_blackstone_post": {
@@ -5763,12 +5355,8 @@
       "y": 2021,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_vmp"
-      ],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicLocations": ["res_location_vmp"],
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_northern_grey_mountains_grung_zint": {
@@ -5788,9 +5376,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_northern_grey_mountains_karak_ziflin": {
@@ -5810,9 +5396,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh_main_northern_oblast_fort_ostrosk": {
@@ -5872,9 +5456,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicResources": ["res_gold"]
     }
   },
   "wh_main_northern_worlds_edge_mountains_khazid_irkulaz": {
@@ -5914,9 +5496,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh_main_ostermark_essen": {
@@ -5936,9 +5516,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_ostermark_mordheim": {
@@ -5957,9 +5535,7 @@
       "y": 2197,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp"
-      ],
+      "strategicLocations": ["res_location_emp"],
       "strategicResources": []
     }
   },
@@ -6040,9 +5616,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicResources": ["res_gold"]
     }
   },
   "wh_main_parravon_et_quenelles_parravon": {
@@ -6061,12 +5635,8 @@
       "y": 1797,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_brt_wef_hef"
-      ],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicLocations": ["res_location_brt_wef_hef"],
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_parravon_et_quenelles_quenelles": {
@@ -6086,9 +5656,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_peak_pass_gnashraks_lair": {
@@ -6108,9 +5676,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh_main_peak_pass_karak_kadrin": {
@@ -6129,9 +5695,7 @@
       "y": 2114,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf"
-      ],
+      "strategicLocations": ["res_location_dwf"],
       "strategicResources": []
     }
   },
@@ -6151,12 +5715,8 @@
       "y": 2137,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_vmp"
-      ],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicLocations": ["res_location_emp_vmp"],
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh_main_reikland_eilhart": {
@@ -6196,9 +5756,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_reikland_helmgart": {
@@ -6217,9 +5775,7 @@
       "y": 1979,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp"
-      ],
+      "strategicLocations": ["res_location_emp"],
       "strategicResources": []
     }
   },
@@ -6239,9 +5795,7 @@
       "y": 1858,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_grn"
-      ],
+      "strategicLocations": ["res_location_grn"],
       "strategicResources": []
     }
   },
@@ -6261,12 +5815,8 @@
       "y": 1858,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf_skv"
-      ],
-      "strategicResources": [
-        "res_gold"
-      ]
+      "strategicLocations": ["res_location_dwf_skv"],
+      "strategicResources": ["res_gold"]
     }
   },
   "wh_main_southern_badlands_agrul_migdhal": {
@@ -6286,9 +5836,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_savage"
-      ]
+      "strategicResources": ["res_savage"]
     }
   },
   "wh_main_southern_badlands_galbaraz": {
@@ -6307,12 +5855,8 @@
       "y": 871,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_hef_vmp_dwf_grn_skv_arkhan"
-      ],
-      "strategicResources": [
-        "res_savage"
-      ]
+      "strategicLocations": ["res_location_hef_vmp_dwf_grn_skv_arkhan"],
+      "strategicResources": ["res_savage"]
     }
   },
   "wh_main_southern_badlands_gor_gazan": {
@@ -6332,9 +5876,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_savage"
-      ]
+      "strategicResources": ["res_savage"]
     }
   },
   "wh_main_southern_badlands_gronti_mingol": {
@@ -6353,12 +5895,8 @@
       "y": 1038,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_colony"
-      ],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicLocations": ["res_location_colony"],
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh_main_southern_grey_mountains_grimhold": {
@@ -6418,9 +5956,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_southern_oblast_fort_jakova": {
@@ -6440,9 +5976,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_southern_oblast_kislev": {
@@ -6461,12 +5995,8 @@
       "y": 2547,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_vmp_brt"
-      ],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicLocations": ["res_location_emp_vmp_brt"],
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_southern_oblast_zavastra": {
@@ -6545,9 +6075,7 @@
       "y": 1913,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp"
-      ],
+      "strategicLocations": ["res_location_emp"],
       "strategicResources": []
     }
   },
@@ -6568,9 +6096,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_wine"
-      ]
+      "strategicResources": ["res_rom_wine"]
     }
   },
   "wh_main_talabecland_kappelburg": {
@@ -6590,9 +6116,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_talabecland_kemperbad": {
@@ -6651,12 +6175,8 @@
       "y": 2332,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_brt"
-      ],
-      "strategicResources": [
-        "res_rom_furs"
-      ]
+      "strategicLocations": ["res_location_emp_brt"],
+      "strategicResources": ["res_rom_furs"]
     }
   },
   "wh_main_the_silver_road_karaz_a_karak": {
@@ -6675,12 +6195,8 @@
       "y": 1671,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf"
-      ],
-      "strategicResources": [
-        "res_gems"
-      ]
+      "strategicLocations": ["res_location_dwf"],
+      "strategicResources": ["res_gems"]
     }
   },
   "wh_main_the_silver_road_mount_squighorn": {
@@ -6740,9 +6256,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_the_vaults_karak_izor": {
@@ -6761,9 +6275,7 @@
       "y": 1471,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf_skv"
-      ],
+      "strategicLocations": ["res_location_dwf_skv"],
       "strategicResources": []
     }
   },
@@ -6824,9 +6336,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_lead"
-      ]
+      "strategicResources": ["res_rom_lead"]
     }
   },
   "wh_main_the_wasteland_marienburg": {
@@ -6845,12 +6355,8 @@
       "y": 2179,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_dyes"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_dyes"]
     }
   },
   "wh_main_tilea_luccini": {
@@ -6889,12 +6395,8 @@
       "y": 1229,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_teb"
-      ],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicLocations": ["res_location_teb"],
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_troll_country_erengrad": {
@@ -6913,12 +6415,8 @@
       "y": 2700,
       "port": true,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicLocations": ["res_location_generic"],
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh_main_troll_country_zoishenk": {
@@ -6998,9 +6496,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_vanaheim_mountains_bjornlings_gathering": {
@@ -7040,9 +6536,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_vanaheim_mountains_troll_fjord": {
@@ -7122,9 +6616,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_savage"
-      ]
+      "strategicResources": ["res_savage"]
     }
   },
   "wh_main_western_badlands_stonemine_tower": {
@@ -7164,9 +6656,7 @@
       "port": true,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_textiles"
-      ]
+      "strategicResources": ["res_rom_textiles"]
     }
   },
   "wh_main_western_border_princes_zvorak": {
@@ -7186,9 +6676,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_western_sylvania_castle_templehof": {
@@ -7208,9 +6696,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_timber"
-      ]
+      "strategicResources": ["res_rom_timber"]
     }
   },
   "wh_main_western_sylvania_fort_oberstyre": {
@@ -7250,9 +6736,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_oil"
-      ]
+      "strategicResources": ["res_rom_oil"]
     }
   },
   "wh_main_wissenland_nuln": {
@@ -7271,9 +6755,7 @@
       "y": 1946,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_emp_vmp"
-      ],
+      "strategicLocations": ["res_location_emp_vmp"],
       "strategicResources": []
     }
   },
@@ -7294,9 +6776,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   },
   "wh_main_wissenland_wissenburg": {
@@ -7316,9 +6796,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_marble"
-      ]
+      "strategicResources": ["res_rom_marble"]
     }
   },
   "wh_main_yn_edri_eternos_the_oak_of_ages": {
@@ -7337,9 +6815,7 @@
       "y": 1592,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_generic"
-      ],
+      "strategicLocations": ["res_location_generic"],
       "strategicResources": []
     }
   },
@@ -7359,9 +6835,7 @@
       "y": 1737,
       "port": false,
       "fortress": null,
-      "strategicLocations": [
-        "res_location_dwf"
-      ],
+      "strategicLocations": ["res_location_dwf"],
       "strategicResources": []
     }
   },
@@ -7402,9 +6876,7 @@
       "port": false,
       "fortress": null,
       "strategicLocations": [],
-      "strategicResources": [
-        "res_rom_iron"
-      ]
+      "strategicResources": ["res_rom_iron"]
     }
   }
 }

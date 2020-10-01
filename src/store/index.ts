@@ -2,9 +2,11 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
 
 import painterReducer from './painter';
+import mapReducer from '../components/map/reducer';
 
 const rootReducer = combineReducers({
   painter: painterReducer,
+  map: mapReducer,
 });
 
 const store = configureStore({
