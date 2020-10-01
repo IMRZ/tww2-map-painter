@@ -22,4 +22,18 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
+serviceWorker.register({
+  onUpdate: (registration) => {
+    const waitingServiceWorker = registration.waiting;
+
+    if (waitingServiceWorker) {
+      waitingServiceWorker.addEventListener('statechange', (event: any) => {
+        if (event.target.state === 'activated') {
+          window.location.reload();
+        }
+      });
+
+      waitingServiceWorker.postMessage({ type: 'SKIP_WAITING' });
+    }
+  },
+});
