@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { IconButton, Typography, Toolbar } from '@material-ui/core';
-import { Tune, GitHub } from '@material-ui/icons';
+import { Tune, GitHub, Help } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -42,6 +42,15 @@ function BarContent(props: BarContentProps) {
         </Typography>
       </div>
       <span className={classes.fillSpace}></span>
+      <IconButton
+        color="inherit"
+        component="a"
+        href="https://steamcommunity.com/sharedfiles/filedetails/?id=2244941200"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Help />
+      </IconButton>
       <IconButton
         className={classes.github}
         color="inherit"
