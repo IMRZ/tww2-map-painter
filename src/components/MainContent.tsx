@@ -26,8 +26,8 @@ const MainContent = () => {
       <Preloader assets={[campaign.map.image, campaign.map.imageText]}>
         <Map campaign={campaign}>
           <MapImageLayer />
-          <MapImageTextLayer />
-          <RegionAreaLayer />
+          {/* <MapImageTextLayer /> */}
+          {/* <RegionAreaLayer /> */}
           <RegionMarkerLayer />
           <MapEventListener />
           <MapCenterButton />
