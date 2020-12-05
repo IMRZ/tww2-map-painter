@@ -15,14 +15,16 @@ export interface Campaign {
     readonly width: number;
     readonly height: number;
   };
+  readonly img: any;
+  readonly game: any;
   readonly regions: Record<any, Region>;
 }
 
 export interface Region {
   readonly key: string;
   readonly name: string;
-  readonly fill: string;
-  readonly d: string;
+  // readonly fill: string;
+  // readonly d: string;
   readonly settlement: {
     readonly x: number;
     readonly y: number;

@@ -22,6 +22,14 @@ export type BaseCampaign = {
     width: number;
     height: number;
   };
+  img: {
+    width: number;
+    height: number;
+  };
+  game: {
+    width: number;
+    height: number;
+  };
 };
 
 export const MapContext = createContext<MapContextState | null>(null);
@@ -50,6 +58,11 @@ export function useMapContext<C extends BaseCampaign = BaseCampaign>() {
       addOverlay: (key: string, label: string, layer: L.Layer) => {
         context!.current.layers[key] = layer;
         dispatch(overlayCreated([key, label]));
+      },
+      toMapLatLng([y, x]: L.LatLngTuple): L.LatLngTuple {
+        const image = context?.current.campaign.img!;
+        const game = context?.current.campaign.game!;
+        return [y * (image.height / game.height), x * (image.width / game.width)];
       },
     };
   }, [context, dispatch]);

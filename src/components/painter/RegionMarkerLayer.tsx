@@ -46,11 +46,11 @@ const RegionMarkerLayer = () => {
   const [elems, setElems] = React.useState<[HTMLElement, any][]>([]);
 
   React.useEffect(() => {
-    const { map, campaign } = context;
+    const { map, campaign, toMapLatLng } = context;
     const elements: [HTMLElement, any][] = [];
 
     const markers = Object.values(campaign.regions).map((region: any) => {
-      const { x, y } = region.settlement;
+      const [y, x] = toMapLatLng([region.settlement.y, region.settlement.x]);
       const el = document.createElement('div');
       el.setAttribute(
         'style',

@@ -7,7 +7,7 @@ import presets from '../data/presets';
 
 const DEFAULT_CAMPAIGN = campaigns.mortal;
 const DEFAULT_PRESETS = presets[DEFAULT_CAMPAIGN.key];
-const DEFAULT_PRESET_MORTAL = presets['mortal']['reikland'];
+const DEFAULT_PRESET_MORTAL = presets['mortal']['default'];
 const DEFAULT_PRESET_VORTEX = presets['vortex']['default'];
 
 const DEFAULT_MAP_STATE = Object.values(DEFAULT_CAMPAIGN.regions).reduce((accumulator, region: any) => {
@@ -52,7 +52,7 @@ const INITIAL_STATE = {
   presets: DEFAULT_PRESETS,
 
   config: {
-    flyToEnabled: true,
+    flyToEnabled: false,
   },
 };
 

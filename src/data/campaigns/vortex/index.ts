@@ -9,5 +9,13 @@ export default {
     width: 3376,
     height: 3868,
   },
+  img: {
+    width: 3376,
+    height: 3868,
+  },
+  game: {
+    width: 726,
+    height: 720,
+  },
   regions,
 };

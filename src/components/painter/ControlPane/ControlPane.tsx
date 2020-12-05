@@ -96,7 +96,7 @@ const ControlPane = () => {
                 onChange={(e, option) => selectedRegion && selectOwner(selectedRegion.key, option?.key ?? null)}
               />
             </div>
-            <List>
+            {/* <List>
               <ListItem dense>
                 <ListItemText primary="Enable fly-to animation" />
                 <ListItemSecondaryAction>
@@ -108,7 +108,7 @@ const ControlPane = () => {
                   />
                 </ListItemSecondaryAction>
               </ListItem>
-            </List>
+            </List> */}
           </>
         )}
         {painter.mode === 'painter' && (

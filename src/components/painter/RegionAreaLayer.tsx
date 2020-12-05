@@ -45,9 +45,11 @@ const RegionPath = (props: { region: Region }) => {
   const { region } = props;
   const { fillColor, onClickRegion } = useRegionPath(region);
 
-  return (
-    <path className={clsx('leaflet-interactive', classes.path)} onClick={onClickRegion} d={region.d} fill={fillColor} />
-  );
+  return null;
+
+  // return (
+    // <path className={clsx('leaflet-interactive', classes.path)} onClick={onClickRegion} d={region.d} fill={fillColor} />
+  // );
 };
 
 function useRegionPath(region: Region) {
