@@ -27,7 +27,7 @@ const MainContent = () => {
         <Map campaign={campaign}>
           <MapImageLayer />
           {/* <MapImageTextLayer /> */}
-          {/* <RegionAreaLayer /> */}
+          <RegionAreaLayer />
           <RegionMarkerLayer />
           <MapEventListener />
           <MapCenterButton />

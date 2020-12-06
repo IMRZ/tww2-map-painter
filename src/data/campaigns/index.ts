@@ -23,8 +23,8 @@ export interface Campaign {
 export interface Region {
   readonly key: string;
   readonly name: string;
-  // readonly fill: string;
-  // readonly d: string;
+  readonly fill: string;
+  readonly d: string;
   readonly settlement: {
     readonly x: number;
     readonly y: number;
