@@ -50,7 +50,7 @@ const RegionMarkerLayer = () => {
     const elements: [HTMLElement, any][] = [];
 
     const markers = Object.values(campaign.regions).map((region: any) => {
-      const { x, y } = region.settlement;
+      const { y, x } = region.settlement;
       const el = document.createElement('div');
       el.setAttribute(
         'style',

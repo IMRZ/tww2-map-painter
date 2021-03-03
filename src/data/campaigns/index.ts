@@ -15,6 +15,8 @@ export interface Campaign {
     readonly width: number;
     readonly height: number;
   };
+  readonly img: any;
+  readonly game: any;
   readonly regions: Record<any, Region>;
 }
 
