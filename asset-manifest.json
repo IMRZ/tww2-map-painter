@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/tww2-map-painter/static/css/main.971bbc6b.chunk.css",
+    "main.js": "/tww2-map-painter/static/js/main.e2016a38.chunk.js",
+    "main.js.map": "/tww2-map-painter/static/js/main.e2016a38.chunk.js.map",
+    "runtime-main.js": "/tww2-map-painter/static/js/runtime-main.f050f20b.js",
+    "runtime-main.js.map": "/tww2-map-painter/static/js/runtime-main.f050f20b.js.map",
+    "static/css/2.a4567992.chunk.css": "/tww2-map-painter/static/css/2.a4567992.chunk.css",
+    "static/js/2.82ce9d12.chunk.js": "/tww2-map-painter/static/js/2.82ce9d12.chunk.js",
+    "static/js/2.82ce9d12.chunk.js.map": "/tww2-map-painter/static/js/2.82ce9d12.chunk.js.map",
+    "index.html": "/tww2-map-painter/index.html",
+    "precache-manifest.59d60c09bd613bb0ff47ad10513c4929.js": "/tww2-map-painter/precache-manifest.59d60c09bd613bb0ff47ad10513c4929.js",
+    "service-worker.js": "/tww2-map-painter/service-worker.js",
+    "static/css/2.a4567992.chunk.css.map": "/tww2-map-painter/static/css/2.a4567992.chunk.css.map",
+    "static/css/main.971bbc6b.chunk.css.map": "/tww2-map-painter/static/css/main.971bbc6b.chunk.css.map",
+    "static/js/2.82ce9d12.chunk.js.LICENSE.txt": "/tww2-map-painter/static/js/2.82ce9d12.chunk.js.LICENSE.txt",
+    "static/media/imported.png": "/tww2-map-painter/static/media/imported.78a134ef.png",
+    "static/media/mon_24.png": "/tww2-map-painter/static/media/mon_24.fa18eed7.png",
+    "static/media/mon_64.png": "/tww2-map-painter/static/media/mon_64.ff8c6505.png",
+    "static/media/wh2_main_great_vortex_map.png": "/tww2-map-painter/static/media/wh2_main_great_vortex_map.b3d9ff41.png",
+    "static/media/wh2_main_great_vortex_map_text.png": "/tww2-map-painter/static/media/wh2_main_great_vortex_map_text.8bfc70b6.png",
+    "static/media/wh_main_map.png": "/tww2-map-painter/static/media/wh_main_map.b5cf2fd1.png",
+    "static/media/wh_main_map_text.png": "/tww2-map-painter/static/media/wh_main_map_text.2a55e879.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f050f20b.js",
+    "static/css/2.a4567992.chunk.css",
+    "static/js/2.82ce9d12.chunk.js",
+    "static/css/main.971bbc6b.chunk.css",
+    "static/js/main.e2016a38.chunk.js"
+  ]
+}
